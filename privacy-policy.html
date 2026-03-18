@@ -3,24 +3,37 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Or App - Privacy Policy</title>
+<title>OrApp - Privacy Policy</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #fafafa; color: #1a1a1a; line-height: 1.7; padding: 40px 20px; }
 .container { max-width: 720px; margin: 0 auto; }
 h1 { font-size: 28px; font-weight: 300; letter-spacing: 2px; margin-bottom: 8px; }
-.date { font-size: 13px; color: #888; margin-bottom: 40px; }
+.date { font-size: 13px; color: #888; margin-bottom: 24px; }
 h2 { font-size: 18px; font-weight: 600; margin-top: 32px; margin-bottom: 12px; }
 p { font-size: 15px; color: #333; margin-bottom: 16px; }
 a { color: #3D50D0; }
 .footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #e0e0e0; font-size: 13px; color: #888; }
+.lang-switch { display: flex; gap: 8px; margin-bottom: 32px; }
+.lang-btn { padding: 6px 16px; border-radius: 8px; border: 1px solid #ddd; background: #fff; color: #666; font-size: 13px; cursor: pointer; transition: all 0.2s; text-decoration: none; }
+.lang-btn:hover { border-color: #999; color: #333; }
+.lang-btn.active { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
+.lang { display: none; }
+.lang.active { display: block; }
 </style>
 </head>
 <body>
 <div class="container">
 
+<div class="lang-switch">
+  <button class="lang-btn active" onclick="switchLang('en')">English</button>
+  <button class="lang-btn" onclick="switchLang('ru')">Русский</button>
+</div>
+
+<!-- ENGLISH -->
+<div id="en" class="lang active">
 <h1>Privacy Policy</h1>
-<p class="date">Last updated: March 10, 2026</p>
+<p class="date">Last updated: March 18, 2026</p>
 
 <p>This Privacy Policy describes how OrApp ("we", "our", or "the App") handles your information. We are committed to protecting your privacy and being transparent about our practices.</p>
 
@@ -28,7 +41,7 @@ a { color: #3D50D0; }
 <p>OrApp is designed to collect as little data as possible. Here is what we process:</p>
 <p><strong>Questions you ask:</strong> When you submit a question, it is sent to a third-party AI service (OpenAI) to generate a response. We do not store your questions on our servers. Questions are processed in real-time and are not linked to your identity.</p>
 <p><strong>Subscription information:</strong> If you subscribe to Or Premium, your purchase is processed entirely by Apple through the App Store. We do not collect, store, or have access to your payment information, credit card details, or Apple ID.</p>
-<p><strong>Usage data:</strong> We store a daily request counter locally on your device (using UserDefaults) to manage the free tier limit of 5 questions per day. This data never leaves your device and is not transmitted to any server.</p>
+<p><strong>Usage data:</strong> We store a daily request counter locally on your device to manage the free tier limit. This data never leaves your device and is not transmitted to any server.</p>
 
 <h2>2. Information We Do NOT Collect</h2>
 <p>We do not collect your name, email address, phone number, location, contacts, photos, browsing history, device identifiers, or any other personal information. We do not create user accounts. We do not track you across apps or websites. We do not use analytics or advertising SDKs.</p>
@@ -48,11 +61,56 @@ a { color: #3D50D0; }
 
 <h2>7. Contact Us</h2>
 <p>If you have any questions about this Privacy Policy, please contact us at: <a href="mailto:volossoftware@icloud.com">volossoftware@icloud.com</a></p>
+</div>
+
+<!-- RUSSIAN -->
+<div id="ru" class="lang">
+<h1>Политика конфиденциальности</h1>
+<p class="date">Последнее обновление: 18 марта 2026</p>
+
+<p>Настоящая Политика конфиденциальности описывает, как приложение OrApp ("мы", "наше" или "Приложение") обрабатывает вашу информацию. Мы стремимся защищать вашу конфиденциальность и быть прозрачными в наших практиках.</p>
+
+<h2>1. Какую информацию мы собираем</h2>
+<p>OrApp разработан так, чтобы собирать минимум данных. Вот что мы обрабатываем:</p>
+<p><strong>Ваши вопросы:</strong> Когда вы отправляете вопрос, он передается стороннему AI-сервису (OpenAI) для генерации ответа. Мы не храним ваши вопросы на наших серверах. Вопросы обрабатываются в режиме реального времени и не связаны с вашей личностью.</p>
+<p><strong>Информация о подписке:</strong> Если вы оформляете подписку Or Premium, покупка обрабатывается исключительно Apple через App Store. Мы не собираем, не храним и не имеем доступа к вашей платежной информации, данным кредитной карты или Apple ID.</p>
+<p><strong>Данные использования:</strong> Мы храним счетчик ежедневных запросов локально на вашем устройстве для управления лимитом бесплатной версии. Эти данные никогда не покидают ваше устройство и не передаются на какой-либо сервер.</p>
+
+<h2>2. Какую информацию мы НЕ собираем</h2>
+<p>Мы не собираем ваше имя, адрес электронной почты, номер телефона, местоположение, контакты, фотографии, историю просмотров, идентификаторы устройства или любую другую личную информацию. Мы не создаем учетные записи пользователей. Мы не отслеживаем вас между приложениями или сайтами. Мы не используем аналитические или рекламные SDK.</p>
+
+<h2>3. Сторонние сервисы</h2>
+<p><strong>OpenAI API:</strong> Ваши вопросы отправляются на серверы OpenAI для генерации AI-ответов. OpenAI обрабатывает эти данные в соответствии со своей политикой конфиденциальности: <a href="https://openai.com/privacy" target="_blank">openai.com/privacy</a>. Мы отправляем только текст вашего вопроса — без каких-либо личных идентификаторов.</p>
+<p><strong>Apple StoreKit:</strong> Покупки подписок обрабатываются Apple. Политика конфиденциальности Apple распространяется на все платежные операции: <a href="https://www.apple.com/privacy/" target="_blank">apple.com/privacy</a>.</p>
+
+<h2>4. Хранение данных</h2>
+<p>Все данные приложения (счетчик запросов, статус подписки) хранятся локально на вашем устройстве. Мы не управляем серверами, которые хранят данные пользователей. При удалении приложения все локальные данные удаляются безвозвратно.</p>
+
+<h2>5. Конфиденциальность детей</h2>
+<p>OrApp не предназначен для детей младше 17 лет. Мы сознательно не собираем информацию от детей. Приложение содержит контент, сгенерированный AI, который может быть неподходящим для несовершеннолетних.</p>
+
+<h2>6. Изменения в политике</h2>
+<p>Мы можем время от времени обновлять эту Политику конфиденциальности. Любые изменения будут отражены на этой странице с обновленной датой. Продолжение использования Приложения после внесения изменений означает принятие обновленной политики.</p>
+
+<h2>7. Свяжитесь с нами</h2>
+<p>Если у вас есть вопросы по данной Политике конфиденциальности, свяжитесь с нами: <a href="mailto:volossoftware@icloud.com">volossoftware@icloud.com</a></p>
+</div>
 
 <div class="footer">
 <p>&copy; 2026 Volos Software Development. All rights reserved.</p>
 </div>
 
 </div>
+
+<script>
+function switchLang(lang) {
+  document.querySelectorAll('.lang').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+  document.getElementById(lang).classList.add('active');
+  document.querySelector('[onclick="switchLang(\'' + lang + '\')"]').classList.add('active');
+}
+// Auto-detect language
+if (navigator.language.startsWith('ru')) switchLang('ru');
+</script>
 </body>
 </html>
