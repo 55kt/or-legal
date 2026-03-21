@@ -15,7 +15,7 @@ p { font-size: 15px; color: #333; margin-bottom: 16px; }
 a { color: #3D50D0; }
 .footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #e0e0e0; font-size: 13px; color: #888; }
 .lang-switch { display: flex; gap: 8px; margin-bottom: 32px; flex-wrap: wrap; }
-.lang-btn { padding: 6px 16px; border-radius: 8px; border: 1px solid #ddd; background: #fff; color: #666; font-size: 13px; cursor: pointer; transition: all 0.2s; text-decoration: none; }
+.lang-btn { padding: 6px 14px; border-radius: 8px; border: 1px solid #ddd; background: #fff; color: #666; font-size: 13px; cursor: pointer; transition: all 0.2s; }
 .lang-btn:hover { border-color: #999; color: #333; }
 .lang-btn.active { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
 .lang { display: none; }
@@ -29,81 +29,237 @@ a { color: #3D50D0; }
   <button class="lang-btn active" onclick="switchLang('en')">English</button>
   <button class="lang-btn" onclick="switchLang('ru')">Русский</button>
   <button class="lang-btn" onclick="switchLang('el')">Ελληνικά</button>
+  <button class="lang-btn" onclick="switchLang('de')">Deutsch</button>
+  <button class="lang-btn" onclick="switchLang('uk')">Українська</button>
+  <button class="lang-btn" onclick="switchLang('zh')">中文</button>
+  <button class="lang-btn" onclick="switchLang('ja')">日本語</button>
+  <button class="lang-btn" onclick="switchLang('ko')">한국어</button>
+  <button class="lang-btn" onclick="switchLang('hi')">हिन्दी</button>
 </div>
 
 <!-- ENGLISH -->
 <div id="en" class="lang active">
 <h1>Privacy Policy</h1>
-<p class="date">Last updated: March 20, 2026</p>
+<p class="date">Last updated: March 21, 2026</p>
 <p>This Privacy Policy describes how OrApp ("we", "our", or "the App") handles your information. We are committed to protecting your privacy and being transparent about our practices.</p>
 <h2>1. Information We Collect</h2>
-<p>OrApp is designed to collect as little data as possible. Here is what we process:</p>
+<p>OrApp is designed to collect as little data as possible.</p>
 <p><strong>Questions you ask:</strong> When you submit a question, it is sent to a third-party AI service (OpenAI) to generate a response. We do not store your questions on our servers. Questions are processed in real-time and are not linked to your identity.</p>
 <p><strong>Subscription information:</strong> If you subscribe to Or Premium, your purchase is processed entirely by Apple through the App Store. We do not collect, store, or have access to your payment information, credit card details, or Apple ID.</p>
-<p><strong>Usage data:</strong> We store a daily request counter locally on your device to manage the free tier limit. This data never leaves your device and is not transmitted to any server.</p>
+<p><strong>Usage data:</strong> We store a daily request counter locally on your device to manage the free tier limit. This data never leaves your device.</p>
 <h2>2. Information We Do NOT Collect</h2>
 <p>We do not collect your name, email address, phone number, location, contacts, photos, browsing history, device identifiers, or any other personal information. We do not create user accounts. We do not track you across apps or websites. We do not use analytics or advertising SDKs.</p>
 <h2>3. Third-Party Services</h2>
-<p><strong>OpenAI API:</strong> Your questions are sent to OpenAI's servers to generate AI responses. OpenAI processes this data according to their own privacy policy, available at <a href="https://openai.com/privacy" target="_blank">openai.com/privacy</a>. We send only the text of your question - no personal identifiers are included.</p>
-<p><strong>Apple StoreKit:</strong> Subscription purchases are handled by Apple. Apple's privacy policy applies to all payment transactions: <a href="https://www.apple.com/privacy/" target="_blank">apple.com/privacy</a>.</p>
+<p><strong>OpenAI API:</strong> Your questions are sent to OpenAI's servers to generate AI responses. OpenAI processes this data according to their privacy policy at <a href="https://openai.com/privacy" target="_blank">openai.com/privacy</a>. We send only the text of your question.</p>
+<p><strong>Apple StoreKit:</strong> Subscription purchases are handled by Apple. Apple's privacy policy applies: <a href="https://www.apple.com/privacy/" target="_blank">apple.com/privacy</a>.</p>
 <h2>4. Data Storage</h2>
-<p>All app data (daily request counter, subscription status) is stored locally on your device. We do not operate any servers that store user data. If you delete the app, all local data is permanently removed.</p>
+<p>All app data is stored locally on your device. We do not operate servers that store user data. If you delete the app, all local data is permanently removed.</p>
 <h2>5. Children's Privacy</h2>
-<p>OrApp is not directed at children under 17. We do not knowingly collect any information from children. The App contains AI-generated content that may not be suitable for minors.</p>
+<p>OrApp is not directed at children under 17. We do not knowingly collect any information from children.</p>
 <h2>6. Changes to This Policy</h2>
-<p>We may update this Privacy Policy from time to time. Any changes will be reflected on this page with an updated date. Continued use of the App after changes constitutes acceptance of the revised policy.</p>
+<p>We may update this Privacy Policy from time to time. Changes will be reflected on this page with an updated date.</p>
 <h2>7. Contact Us</h2>
-<p>If you have any questions about this Privacy Policy, please contact us at: <a href="mailto:volossoftware@icloud.com">volossoftware@icloud.com</a></p>
+<p>Questions? Contact us at: <a href="mailto:volossoftware@icloud.com">volossoftware@icloud.com</a></p>
 </div>
 
 <!-- RUSSIAN -->
 <div id="ru" class="lang">
 <h1>Политика конфиденциальности</h1>
-<p class="date">Последнее обновление: 20 марта 2026</p>
-<p>Настоящая Политика конфиденциальности описывает, как приложение OrApp ("мы", "наше" или "Приложение") обрабатывает вашу информацию. Мы стремимся защищать вашу конфиденциальность и быть прозрачными в наших практиках.</p>
+<p class="date">Последнее обновление: 21 марта 2026</p>
+<p>Настоящая Политика конфиденциальности описывает, как приложение OrApp ("мы", "наше" или "Приложение") обрабатывает вашу информацию.</p>
 <h2>1. Какую информацию мы собираем</h2>
-<p>OrApp разработан так, чтобы собирать минимум данных. Вот что мы обрабатываем:</p>
+<p>OrApp разработан так, чтобы собирать минимум данных.</p>
 <p><strong>Ваши вопросы:</strong> Когда вы отправляете вопрос, он передается стороннему AI-сервису (OpenAI) для генерации ответа. Мы не храним ваши вопросы на наших серверах. Вопросы обрабатываются в режиме реального времени и не связаны с вашей личностью.</p>
-<p><strong>Информация о подписке:</strong> Если вы оформляете подписку Or Premium, покупка обрабатывается исключительно Apple через App Store. Мы не собираем, не храним и не имеем доступа к вашей платежной информации, данным кредитной карты или Apple ID.</p>
-<p><strong>Данные использования:</strong> Мы храним счетчик ежедневных запросов локально на вашем устройстве для управления лимитом бесплатной версии. Эти данные никогда не покидают ваше устройство и не передаются на какой-либо сервер.</p>
+<p><strong>Информация о подписке:</strong> Если вы оформляете подписку Or Premium, покупка обрабатывается исключительно Apple через App Store. Мы не собираем, не храним и не имеем доступа к вашей платежной информации.</p>
+<p><strong>Данные использования:</strong> Мы храним счетчик ежедневных запросов локально на вашем устройстве. Эти данные никогда не покидают ваше устройство.</p>
 <h2>2. Какую информацию мы НЕ собираем</h2>
-<p>Мы не собираем ваше имя, адрес электронной почты, номер телефона, местоположение, контакты, фотографии, историю просмотров, идентификаторы устройства или любую другую личную информацию. Мы не создаем учетные записи пользователей. Мы не отслеживаем вас между приложениями или сайтами. Мы не используем аналитические или рекламные SDK.</p>
+<p>Мы не собираем ваше имя, адрес электронной почты, номер телефона, местоположение, контакты, фотографии, историю просмотров, идентификаторы устройства или любую другую личную информацию. Мы не создаем учетные записи пользователей. Мы не отслеживаем вас между приложениями или сайтами.</p>
 <h2>3. Сторонние сервисы</h2>
-<p><strong>OpenAI API:</strong> Ваши вопросы отправляются на серверы OpenAI для генерации AI-ответов. OpenAI обрабатывает эти данные в соответствии со своей политикой конфиденциальности: <a href="https://openai.com/privacy" target="_blank">openai.com/privacy</a>. Мы отправляем только текст вашего вопроса - без каких-либо личных идентификаторов.</p>
-<p><strong>Apple StoreKit:</strong> Покупки подписок обрабатываются Apple. Политика конфиденциальности Apple распространяется на все платежные операции: <a href="https://www.apple.com/privacy/" target="_blank">apple.com/privacy</a>.</p>
+<p><strong>OpenAI API:</strong> Ваши вопросы отправляются на серверы OpenAI для генерации ответов. Политика конфиденциальности OpenAI: <a href="https://openai.com/privacy" target="_blank">openai.com/privacy</a>.</p>
+<p><strong>Apple StoreKit:</strong> Покупки обрабатываются Apple: <a href="https://www.apple.com/privacy/" target="_blank">apple.com/privacy</a>.</p>
 <h2>4. Хранение данных</h2>
-<p>Все данные приложения (счетчик запросов, статус подписки) хранятся локально на вашем устройстве. Мы не управляем серверами, которые хранят данные пользователей. При удалении приложения все локальные данные удаляются безвозвратно.</p>
+<p>Все данные приложения хранятся локально на вашем устройстве. При удалении приложения все данные удаляются безвозвратно.</p>
 <h2>5. Конфиденциальность детей</h2>
-<p>OrApp не предназначен для детей младше 17 лет. Мы сознательно не собираем информацию от детей. Приложение содержит контент, сгенерированный AI, который может быть неподходящим для несовершеннолетних.</p>
+<p>OrApp не предназначен для детей младше 17 лет. Мы сознательно не собираем информацию от детей.</p>
 <h2>6. Изменения в политике</h2>
-<p>Мы можем время от времени обновлять эту Политику конфиденциальности. Любые изменения будут отражены на этой странице с обновленной датой. Продолжение использования Приложения после внесения изменений означает принятие обновленной политики.</p>
+<p>Мы можем обновлять эту Политику. Изменения будут отражены на этой странице с обновленной датой.</p>
 <h2>7. Свяжитесь с нами</h2>
-<p>Если у вас есть вопросы по данной Политике конфиденциальности, свяжитесь с нами: <a href="mailto:volossoftware@icloud.com">volossoftware@icloud.com</a></p>
+<p>Вопросы? Свяжитесь с нами: <a href="mailto:volossoftware@icloud.com">volossoftware@icloud.com</a></p>
 </div>
 
 <!-- GREEK -->
 <div id="el" class="lang">
 <h1>Πολιτική Απορρήτου</h1>
-<p class="date">Τελευταία ενημέρωση: 20 Μαρτίου 2026</p>
-<p>Η παρούσα Πολιτική Απορρήτου περιγράφει τον τρόπο με τον οποίο η εφαρμογή OrApp ("εμείς", "μας" ή "η Εφαρμογή") διαχειρίζεται τις πληροφορίες σας. Δεσμευόμαστε να προστατεύουμε το απόρρητό σας και να είμαστε διαφανείς στις πρακτικές μας.</p>
+<p class="date">Τελευταία ενημέρωση: 21 Μαρτίου 2026</p>
+<p>Η παρούσα Πολιτική Απορρήτου περιγράφει τον τρόπο με τον οποίο η εφαρμογή OrApp διαχειρίζεται τις πληροφορίες σας.</p>
 <h2>1. Πληροφορίες που συλλέγουμε</h2>
-<p>Η OrApp έχει σχεδιαστεί ώστε να συλλέγει τα ελάχιστα δυνατά δεδομένα. Ορίστε τι επεξεργαζόμαστε:</p>
-<p><strong>Οι ερωτήσεις σας:</strong> Όταν υποβάλλετε μια ερώτηση, αποστέλλεται σε υπηρεσία AI τρίτου μέρους (OpenAI) για τη δημιουργία απάντησης. Δεν αποθηκεύουμε τις ερωτήσεις σας στους διακομιστές μας. Οι ερωτήσεις επεξεργάζονται σε πραγματικό χρόνο και δεν συνδέονται με την ταυτότητά σας.</p>
-<p><strong>Πληροφορίες συνδρομής:</strong> Εάν εγγραφείτε στο Or Premium, η αγορά σας επεξεργάζεται εξ ολοκλήρου από την Apple μέσω του App Store. Δεν συλλέγουμε, δεν αποθηκεύουμε και δεν έχουμε πρόσβαση στα στοιχεία πληρωμής σας, στα στοιχεία πιστωτικής κάρτας ή στο Apple ID σας.</p>
-<p><strong>Δεδομένα χρήσης:</strong> Αποθηκεύουμε έναν ημερήσιο μετρητή αιτημάτων τοπικά στη συσκευή σας για τη διαχείριση του ορίου της δωρεάν έκδοσης. Αυτά τα δεδομένα δεν φεύγουν ποτέ από τη συσκευή σας και δεν μεταδίδονται σε κανέναν διακομιστή.</p>
+<p>Η OrApp έχει σχεδιαστεί ώστε να συλλέγει τα ελάχιστα δυνατά δεδομένα.</p>
+<p><strong>Οι ερωτήσεις σας:</strong> Όταν υποβάλλετε μια ερώτηση, αποστέλλεται σε υπηρεσία AI τρίτου μέρους (OpenAI) για τη δημιουργία απάντησης. Δεν αποθηκεύουμε τις ερωτήσεις σας στους διακομιστές μας.</p>
+<p><strong>Πληροφορίες συνδρομής:</strong> Εάν εγγραφείτε στο Or Premium, η αγορά σας επεξεργάζεται εξ ολοκλήρου από την Apple μέσω του App Store.</p>
+<p><strong>Δεδομένα χρήσης:</strong> Αποθηκεύουμε έναν ημερήσιο μετρητή αιτημάτων τοπικά στη συσκευή σας. Αυτά τα δεδομένα δεν φεύγουν ποτέ από τη συσκευή σας.</p>
 <h2>2. Πληροφορίες που ΔΕΝ συλλέγουμε</h2>
-<p>Δεν συλλέγουμε το όνομά σας, τη διεύθυνση email, τον αριθμό τηλεφώνου, την τοποθεσία, τις επαφές, τις φωτογραφίες, το ιστορικό περιήγησης, τα αναγνωριστικά συσκευής ή οποιαδήποτε άλλη προσωπική πληροφορία. Δεν δημιουργούμε λογαριασμούς χρηστών. Δεν σας παρακολουθούμε μεταξύ εφαρμογών ή ιστοτόπων. Δεν χρησιμοποιούμε SDK αναλυτικών ή διαφημίσεων.</p>
+<p>Δεν συλλέγουμε το όνομά σας, email, τηλέφωνο, τοποθεσία, επαφές, φωτογραφίες, ιστορικό περιήγησης ή αναγνωριστικά συσκευής. Δεν δημιουργούμε λογαριασμούς χρηστών. Δεν σας παρακολουθούμε.</p>
 <h2>3. Υπηρεσίες τρίτων</h2>
-<p><strong>OpenAI API:</strong> Οι ερωτήσεις σας αποστέλλονται στους διακομιστές της OpenAI για τη δημιουργία απαντήσεων AI. Η OpenAI επεξεργάζεται αυτά τα δεδομένα σύμφωνα με τη δική της πολιτική απορρήτου: <a href="https://openai.com/privacy" target="_blank">openai.com/privacy</a>. Αποστέλλουμε μόνο το κείμενο της ερώτησής σας - χωρίς προσωπικά αναγνωριστικά.</p>
-<p><strong>Apple StoreKit:</strong> Οι αγορές συνδρομών διεκπεραιώνονται από την Apple. Η πολιτική απορρήτου της Apple ισχύει για όλες τις συναλλαγές πληρωμών: <a href="https://www.apple.com/privacy/" target="_blank">apple.com/privacy</a>.</p>
+<p><strong>OpenAI API:</strong> Οι ερωτήσεις σας αποστέλλονται στους διακομιστές της OpenAI: <a href="https://openai.com/privacy" target="_blank">openai.com/privacy</a>.</p>
+<p><strong>Apple StoreKit:</strong> Οι αγορές διεκπεραιώνονται από την Apple: <a href="https://www.apple.com/privacy/" target="_blank">apple.com/privacy</a>.</p>
 <h2>4. Αποθήκευση δεδομένων</h2>
-<p>Όλα τα δεδομένα της εφαρμογής (μετρητής αιτημάτων, κατάσταση συνδρομής) αποθηκεύονται τοπικά στη συσκευή σας. Δεν διαθέτουμε διακομιστές που αποθηκεύουν δεδομένα χρηστών. Εάν διαγράψετε την εφαρμογή, όλα τα τοπικά δεδομένα διαγράφονται οριστικά.</p>
+<p>Όλα τα δεδομένα αποθηκεύονται τοπικά στη συσκευή σας. Εάν διαγράψετε την εφαρμογή, όλα τα δεδομένα διαγράφονται οριστικά.</p>
 <h2>5. Απόρρητο παιδιών</h2>
-<p>Η OrApp δεν απευθύνεται σε παιδιά κάτω των 17 ετών. Δεν συλλέγουμε εν γνώσει μας πληροφορίες από παιδιά. Η εφαρμογή περιέχει περιεχόμενο που δημιουργείται από AI και μπορεί να μην είναι κατάλληλο για ανηλίκους.</p>
+<p>Η OrApp δεν απευθύνεται σε παιδιά κάτω των 17 ετών.</p>
 <h2>6. Αλλαγές στην πολιτική</h2>
-<p>Ενδέχεται να ενημερώσουμε αυτήν την Πολιτική Απορρήτου κατά καιρούς. Οποιεσδήποτε αλλαγές θα αντικατοπτρίζονται σε αυτήν τη σελίδα με ενημερωμένη ημερομηνία. Η συνέχιση της χρήσης της Εφαρμογής μετά από αλλαγές συνιστά αποδοχή της αναθεωρημένης πολιτικής.</p>
+<p>Ενδέχεται να ενημερώσουμε αυτήν την Πολιτική. Οι αλλαγές θα αντικατοπτρίζονται σε αυτήν τη σελίδα.</p>
 <h2>7. Επικοινωνήστε μαζί μας</h2>
-<p>Εάν έχετε ερωτήσεις σχετικά με αυτήν την Πολιτική Απορρήτου, επικοινωνήστε μαζί μας στο: <a href="mailto:volossoftware@icloud.com">volossoftware@icloud.com</a></p>
+<p>Ερωτήσεις; Επικοινωνήστε: <a href="mailto:volossoftware@icloud.com">volossoftware@icloud.com</a></p>
+</div>
+
+<!-- GERMAN -->
+<div id="de" class="lang">
+<h1>Datenschutzrichtlinie</h1>
+<p class="date">Letzte Aktualisierung: 21. März 2026</p>
+<p>Diese Datenschutzrichtlinie beschreibt, wie OrApp Ihre Informationen verarbeitet.</p>
+<h2>1. Informationen, die wir erheben</h2>
+<p>OrApp ist so konzipiert, dass möglichst wenige Daten erhoben werden.</p>
+<p><strong>Ihre Fragen:</strong> Wenn Sie eine Frage stellen, wird sie an einen KI-Dienst eines Drittanbieters (OpenAI) gesendet. Wir speichern Ihre Fragen nicht auf unseren Servern.</p>
+<p><strong>Abonnement-Informationen:</strong> Wenn Sie Or Premium abonnieren, wird der Kauf vollständig von Apple über den App Store abgewickelt.</p>
+<p><strong>Nutzungsdaten:</strong> Wir speichern einen täglichen Anfragezähler lokal auf Ihrem Gerät. Diese Daten verlassen niemals Ihr Gerät.</p>
+<h2>2. Informationen, die wir NICHT erheben</h2>
+<p>Wir erheben nicht Ihren Namen, E-Mail-Adresse, Telefonnummer, Standort, Kontakte, Fotos, Browserverlauf oder Gerätekennungen. Wir erstellen keine Benutzerkonten. Wir verfolgen Sie nicht.</p>
+<h2>3. Drittanbieter-Dienste</h2>
+<p><strong>OpenAI API:</strong> Ihre Fragen werden an OpenAI gesendet: <a href="https://openai.com/privacy" target="_blank">openai.com/privacy</a>.</p>
+<p><strong>Apple StoreKit:</strong> Käufe werden von Apple abgewickelt: <a href="https://www.apple.com/privacy/" target="_blank">apple.com/privacy</a>.</p>
+<h2>4. Datenspeicherung</h2>
+<p>Alle App-Daten werden lokal auf Ihrem Gerät gespeichert. Wenn Sie die App löschen, werden alle Daten dauerhaft entfernt.</p>
+<h2>5. Datenschutz für Kinder</h2>
+<p>OrApp richtet sich nicht an Kinder unter 17 Jahren.</p>
+<h2>6. Änderungen dieser Richtlinie</h2>
+<p>Wir können diese Richtlinie aktualisieren. Änderungen werden auf dieser Seite angezeigt.</p>
+<h2>7. Kontaktieren Sie uns</h2>
+<p>Fragen? Kontaktieren Sie uns: <a href="mailto:volossoftware@icloud.com">volossoftware@icloud.com</a></p>
+</div>
+
+<!-- UKRAINIAN -->
+<div id="uk" class="lang">
+<h1>Політика конфіденційності</h1>
+<p class="date">Останнє оновлення: 21 березня 2026</p>
+<p>Ця Політика конфіденційності описує, як додаток OrApp обробляє вашу інформацію.</p>
+<h2>1. Яку інформацію ми збираємо</h2>
+<p>OrApp розроблений так, щоб збирати мінімум даних.</p>
+<p><strong>Ваші запитання:</strong> Коли ви надсилаєте запитання, воно передається стороннньому AI-сервісу (OpenAI) для генерації відповіді. Ми не зберігаємо ваші запитання на наших серверах.</p>
+<p><strong>Інформація про підписку:</strong> Якщо ви оформлюєте підписку Or Premium, покупка обробляється виключно Apple через App Store.</p>
+<p><strong>Дані використання:</strong> Ми зберігаємо лічильник щоденних запитів локально на вашому пристрої. Ці дані ніколи не покидають ваш пристрій.</p>
+<h2>2. Яку інформацію ми НЕ збираємо</h2>
+<p>Ми не збираємо ваше ім'я, email, телефон, місцезнаходження, контакти, фото, історію перегляду або ідентифікатори пристрою. Ми не створюємо облікові записи. Ми не відстежуємо вас.</p>
+<h2>3. Сторонні сервіси</h2>
+<p><strong>OpenAI API:</strong> Ваші запитання надсилаються на сервери OpenAI: <a href="https://openai.com/privacy" target="_blank">openai.com/privacy</a>.</p>
+<p><strong>Apple StoreKit:</strong> Покупки обробляються Apple: <a href="https://www.apple.com/privacy/" target="_blank">apple.com/privacy</a>.</p>
+<h2>4. Зберігання даних</h2>
+<p>Усі дані зберігаються локально на вашому пристрої. При видаленні додатку всі дані видаляються назавжди.</p>
+<h2>5. Конфіденційність дітей</h2>
+<p>OrApp не призначений для дітей молодше 17 років.</p>
+<h2>6. Зміни в політиці</h2>
+<p>Ми можемо оновлювати цю Політику. Зміни будуть відображені на цій сторінці.</p>
+<h2>7. Зв'яжіться з нами</h2>
+<p>Питання? Зв'яжіться: <a href="mailto:volossoftware@icloud.com">volossoftware@icloud.com</a></p>
+</div>
+
+<!-- CHINESE -->
+<div id="zh" class="lang">
+<h1>隐私政策</h1>
+<p class="date">最后更新：2026年3月21日</p>
+<p>本隐私政策描述了 OrApp 如何处理您的信息。</p>
+<h2>1. 我们收集的信息</h2>
+<p>OrApp 旨在尽可能少地收集数据。</p>
+<p><strong>您的问题：</strong>当您提交问题时，它会被发送到第三方 AI 服务（OpenAI）以生成回答。我们不会在服务器上存储您的问题。</p>
+<p><strong>订阅信息：</strong>如果您订阅 Or Premium，购买完全由 Apple 通过 App Store 处理。</p>
+<p><strong>使用数据：</strong>我们在您的设备上本地存储每日请求计数器。这些数据永远不会离开您的设备。</p>
+<h2>2. 我们不收集的信息</h2>
+<p>我们不收集您的姓名、电子邮件、电话号码、位置、联系人、照片、浏览历史或设备标识符。我们不创建用户帐户。我们不跟踪您。</p>
+<h2>3. 第三方服务</h2>
+<p><strong>OpenAI API：</strong>您的问题被发送到 OpenAI 的服务器：<a href="https://openai.com/privacy" target="_blank">openai.com/privacy</a>。</p>
+<p><strong>Apple StoreKit：</strong>购买由 Apple 处理：<a href="https://www.apple.com/privacy/" target="_blank">apple.com/privacy</a>。</p>
+<h2>4. 数据存储</h2>
+<p>所有应用数据存储在您的设备上。删除应用后，所有数据将被永久删除。</p>
+<h2>5. 儿童隐私</h2>
+<p>OrApp 不面向17岁以下的儿童。</p>
+<h2>6. 政策变更</h2>
+<p>我们可能会更新本隐私政策。更改将在此页面上反映。</p>
+<h2>7. 联系我们</h2>
+<p>有问题？联系我们：<a href="mailto:volossoftware@icloud.com">volossoftware@icloud.com</a></p>
+</div>
+
+<!-- JAPANESE -->
+<div id="ja" class="lang">
+<h1>プライバシーポリシー</h1>
+<p class="date">最終更新：2026年3月21日</p>
+<p>このプライバシーポリシーは、OrApp がお客様の情報をどのように取り扱うかを説明します。</p>
+<h2>1. 収集する情報</h2>
+<p>OrApp はできる限り少ないデータを収集するよう設計されています。</p>
+<p><strong>お客様の質問：</strong>質問を送信すると、サードパーティのAIサービス（OpenAI）に送信されます。質問はサーバーに保存されません。</p>
+<p><strong>サブスクリプション情報：</strong>Or Premium に登録した場合、購入は Apple が App Store を通じて処理します。</p>
+<p><strong>利用データ：</strong>デバイスにローカルで日次リクエストカウンターを保存します。このデータはデバイスから外に出ることはありません。</p>
+<h2>2. 収集しない情報</h2>
+<p>お名前、メールアドレス、電話番号、位置情報、連絡先、写真、閲覧履歴、デバイス識別子は収集しません。ユーザーアカウントは作成しません。追跡しません。</p>
+<h2>3. サードパーティサービス</h2>
+<p><strong>OpenAI API：</strong>質問はOpenAIのサーバーに送信されます：<a href="https://openai.com/privacy" target="_blank">openai.com/privacy</a>。</p>
+<p><strong>Apple StoreKit：</strong>購入はAppleが処理します：<a href="https://www.apple.com/privacy/" target="_blank">apple.com/privacy</a>。</p>
+<h2>4. データ保存</h2>
+<p>すべてのアプリデータはデバイスにローカル保存されます。アプリを削除すると、すべてのデータが永久に削除されます。</p>
+<h2>5. 子どものプライバシー</h2>
+<p>OrApp は17歳未満の子どもを対象としていません。</p>
+<h2>6. ポリシーの変更</h2>
+<p>このプライバシーポリシーは随時更新される場合があります。変更はこのページに反映されます。</p>
+<h2>7. お問い合わせ</h2>
+<p>ご質問は：<a href="mailto:volossoftware@icloud.com">volossoftware@icloud.com</a></p>
+</div>
+
+<!-- KOREAN -->
+<div id="ko" class="lang">
+<h1>개인정보 처리방침</h1>
+<p class="date">최종 업데이트: 2026년 3월 21일</p>
+<p>본 개인정보 처리방침은 OrApp이 귀하의 정보를 어떻게 처리하는지 설명합니다.</p>
+<h2>1. 수집하는 정보</h2>
+<p>OrApp은 최소한의 데이터를 수집하도록 설계되었습니다.</p>
+<p><strong>귀하의 질문:</strong> 질문을 제출하면 제3자 AI 서비스(OpenAI)로 전송됩니다. 질문은 서버에 저장되지 않습니다.</p>
+<p><strong>구독 정보:</strong> Or Premium을 구독하면 구매는 Apple이 App Store를 통해 처리합니다.</p>
+<p><strong>사용 데이터:</strong> 기기에 일일 요청 카운터를 로컬로 저장합니다. 이 데이터는 기기 밖으로 나가지 않습니다.</p>
+<h2>2. 수집하지 않는 정보</h2>
+<p>이름, 이메일, 전화번호, 위치, 연락처, 사진, 브라우저 기록, 기기 식별자를 수집하지 않습니다. 사용자 계정을 만들지 않습니다. 추적하지 않습니다.</p>
+<h2>3. 제3자 서비스</h2>
+<p><strong>OpenAI API:</strong> 질문은 OpenAI 서버로 전송됩니다: <a href="https://openai.com/privacy" target="_blank">openai.com/privacy</a>.</p>
+<p><strong>Apple StoreKit:</strong> 구매는 Apple이 처리합니다: <a href="https://www.apple.com/privacy/" target="_blank">apple.com/privacy</a>.</p>
+<h2>4. 데이터 저장</h2>
+<p>모든 앱 데이터는 기기에 로컬로 저장됩니다. 앱을 삭제하면 모든 데이터가 영구적으로 삭제됩니다.</p>
+<h2>5. 아동 개인정보</h2>
+<p>OrApp은 17세 미만 아동을 대상으로 하지 않습니다.</p>
+<h2>6. 방침 변경</h2>
+<p>본 방침은 수시로 업데이트될 수 있습니다. 변경 사항은 이 페이지에 반영됩니다.</p>
+<h2>7. 문의하기</h2>
+<p>질문이 있으시면: <a href="mailto:volossoftware@icloud.com">volossoftware@icloud.com</a></p>
+</div>
+
+<!-- HINDI -->
+<div id="hi" class="lang">
+<h1>गोपनीयता नीति</h1>
+<p class="date">अंतिम अपडेट: 21 मार्च 2026</p>
+<p>यह गोपनीयता नीति बताती है कि OrApp आपकी जानकारी को कैसे संभालता है।</p>
+<h2>1. हम कौन सी जानकारी एकत्र करते हैं</h2>
+<p>OrApp को यथासंभव कम डेटा एकत्र करने के लिए डिज़ाइन किया गया है।</p>
+<p><strong>आपके प्रश्न:</strong> जब आप प्रश्न भेजते हैं, तो इसे तृतीय-पक्ष AI सेवा (OpenAI) को भेजा जाता है। हम अपने सर्वर पर आपके प्रश्न संग्रहीत नहीं करते।</p>
+<p><strong>सदस्यता जानकारी:</strong> Or Premium की सदस्यता Apple द्वारा App Store के माध्यम से संसाधित की जाती है।</p>
+<p><strong>उपयोग डेटा:</strong> हम आपके डिवाइस पर स्थानीय रूप से दैनिक अनुरोध काउंटर संग्रहीत करते हैं। यह डेटा कभी आपके डिवाइस से बाहर नहीं जाता।</p>
+<h2>2. हम कौन सी जानकारी एकत्र नहीं करते</h2>
+<p>हम आपका नाम, ईमेल, फ़ोन नंबर, स्थान, संपर्क, फ़ोटो, ब्राउज़िंग इतिहास या डिवाइस पहचानकर्ता एकत्र नहीं करते। हम उपयोगकर्ता खाते नहीं बनाते। हम आपको ट्रैक नहीं करते।</p>
+<h2>3. तृतीय-पक्ष सेवाएं</h2>
+<p><strong>OpenAI API:</strong> प्रश्न OpenAI के सर्वर पर भेजे जाते हैं: <a href="https://openai.com/privacy" target="_blank">openai.com/privacy</a>.</p>
+<p><strong>Apple StoreKit:</strong> खरीदारी Apple द्वारा संसाधित: <a href="https://www.apple.com/privacy/" target="_blank">apple.com/privacy</a>.</p>
+<h2>4. डेटा भंडारण</h2>
+<p>सभी ऐप डेटा आपके डिवाइस पर स्थानीय रूप से संग्रहीत है। ऐप हटाने पर सभी डेटा स्थायी रूप से हटा दिया जाता है।</p>
+<h2>5. बच्चों की गोपनीयता</h2>
+<p>OrApp 17 वर्ष से कम उम्र के बच्चों के लिए नहीं है।</p>
+<h2>6. नीति में परिवर्तन</h2>
+<p>हम इस नीति को अपडेट कर सकते हैं। परिवर्तन इस पृष्ठ पर दिखाई देंगे।</p>
+<h2>7. हमसे संपर्क करें</h2>
+<p>प्रश्न? संपर्क करें: <a href="mailto:volossoftware@icloud.com">volossoftware@icloud.com</a></p>
 </div>
 
 <div class="footer">
@@ -119,12 +275,18 @@ function switchLang(lang) {
   document.getElementById(lang).classList.add('active');
   var btns = document.querySelectorAll('.lang-btn');
   for (var i = 0; i < btns.length; i++) {
-    if (btns[i].getAttribute('onclick').indexOf(lang) !== -1) btns[i].classList.add('active');
+    if (btns[i].getAttribute('onclick').indexOf("'" + lang + "'") !== -1) btns[i].classList.add('active');
   }
 }
-var userLang = navigator.language || navigator.userLanguage;
-if (userLang.startsWith('ru')) switchLang('ru');
-else if (userLang.startsWith('el')) switchLang('el');
+var l = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+if (l.startsWith('ru')) switchLang('ru');
+else if (l.startsWith('el')) switchLang('el');
+else if (l.startsWith('de')) switchLang('de');
+else if (l.startsWith('uk')) switchLang('uk');
+else if (l.startsWith('zh')) switchLang('zh');
+else if (l.startsWith('ja')) switchLang('ja');
+else if (l.startsWith('ko')) switchLang('ko');
+else if (l.startsWith('hi')) switchLang('hi');
 </script>
 </body>
 </html>
