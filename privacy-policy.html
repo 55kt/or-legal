@@ -13,6 +13,8 @@ h1 { font-size: 28px; font-weight: 300; letter-spacing: 2px; margin-bottom: 8px;
 h2 { font-size: 18px; font-weight: 600; margin-top: 32px; margin-bottom: 12px; }
 p { font-size: 15px; color: #333; margin-bottom: 16px; }
 a { color: #3D50D0; }
+.important { background: #fff3f3; border-left: 3px solid #e74c3c; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 20px 0; }
+.important p { margin-bottom: 0; color: #333; }
 .footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #e0e0e0; font-size: 13px; color: #888; }
 .lang-switch { display: flex; gap: 8px; margin-bottom: 32px; flex-wrap: wrap; }
 .lang-btn { padding: 6px 14px; border-radius: 8px; border: 1px solid #ddd; background: #fff; color: #666; font-size: 13px; cursor: pointer; transition: all 0.2s; }
@@ -37,229 +39,301 @@ a { color: #3D50D0; }
   <button class="lang-btn" onclick="switchLang('hi')">हिन्दी</button>
 </div>
 
-<!-- ENGLISH -->
+<!-- EN -->
 <div id="en" class="lang active">
 <h1>Privacy Policy</h1>
-<p class="date">Last updated: March 21, 2026</p>
-<p>This Privacy Policy describes how Or - Decide Instantly ("we", "our", or "the App") handles your information. We are committed to protecting your privacy and being transparent about our practices.</p>
+<p class="date">Last updated: June 16, 2026</p>
+<p>This Privacy Policy explains how Or — Decide Instantly ("we", "our", or "the App"), published by Volos Software Development, handles your information. We are committed to collecting as little data as possible and being transparent about it. The App has two modes: an AI mode, and a Social mode where users ask and answer each other's questions.</p>
 <h2>1. Information We Collect</h2>
-<p>Or - Decide Instantly is designed to collect as little data as possible.</p>
-<p><strong>Questions you ask:</strong> When you submit a question, it is sent to a third-party AI service (OpenAI) to generate a response. We do not store your questions on our servers. Questions are processed in real-time and are not linked to your identity.</p>
-<p><strong>Subscription information:</strong> If you subscribe to Or Premium, your purchase is processed entirely by Apple through the App Store. We do not collect, store, or have access to your payment information, credit card details, or Apple ID.</p>
-<p><strong>Usage data:</strong> We store a daily request counter locally on your device to manage the free tier limit. This data never leaves your device.</p>
+<p>We collect only what is needed to run the App's two modes.</p>
+<p><strong>Questions you ask in AI mode:</strong> When you ask the AI, your question text is sent to a third-party AI provider (OpenAI) to generate a response. We do not store these questions on our servers; they are processed in real time and are not linked to your identity.</p>
+<p><strong>Content you post in Social mode:</strong> When you publish a question, or answer someone else's, the text you write (your question and its two options, or your short answer) is stored on our backend so other users can see and respond to it. This content is visible to other users of the App. It is associated only with a random, anonymous identifier — never with your name or real identity.</p>
+<p><strong>Anonymous account:</strong> To operate Social mode, the App signs you in anonymously through Firebase Authentication. This creates a random identifier for your device that contains no name, email, or password. We use it to link your questions to your device (so we can notify you when they are answered) and to enforce blocking and moderation.</p>
+<p><strong>Notification token:</strong> If you allow notifications, we store an anonymous push token (via Firebase Cloud Messaging and the Apple Push Notification service) so we can alert you when your question is answered. It is not linked to any personal information.</p>
+<p><strong>Subscription information:</strong> If you subscribe to Or Premium, the purchase is handled entirely by Apple through the App Store. We never collect, store, or have access to your payment details or Apple ID.</p>
+<p><strong>Usage data:</strong> We keep a daily request counter locally on your device to manage the free-tier limit. This counter never leaves your device.</p>
 <h2>2. Information We Do NOT Collect</h2>
-<p>We do not collect your name, email address, phone number, location, contacts, photos, browsing history, device identifiers, or any other personal information. We do not create user accounts. We do not track you across apps or websites. We do not use analytics or advertising SDKs.</p>
-<h2>3. Third-Party Services</h2>
-<p><strong>OpenAI API:</strong> Your questions are sent to OpenAI's servers to generate AI responses. OpenAI processes this data according to their privacy policy at <a href="https://openai.com/privacy" target="_blank">openai.com/privacy</a>. We send only the text of your question.</p>
-<p><strong>Apple StoreKit:</strong> Subscription purchases are handled by Apple. Apple's privacy policy applies: <a href="https://www.apple.com/privacy/" target="_blank">apple.com/privacy</a>.</p>
-<h2>4. Data Storage</h2>
-<p>All app data is stored locally on your device. We do not operate servers that store user data. If you delete the app, all local data is permanently removed.</p>
-<h2>5. Children's Privacy</h2>
-<p>Or - Decide Instantly is not directed at children under 16. We do not knowingly collect any information from children.</p>
-<h2>6. Changes to This Policy</h2>
-<p>We may update this Privacy Policy from time to time. Changes will be reflected on this page with an updated date.</p>
-<h2>7. Contact Us</h2>
-<p>Questions? Contact us at: <a href="mailto:volossoftware@icloud.com">volossoftware@icloud.com</a></p>
+<p>We do not collect personally identifying information: no name, email address, phone number, precise location, contacts, photos, or browsing history. The anonymous account and notification token contain no personal data. We do not ask you to register with personal details, we do not track you across other apps or websites, and we do not use advertising SDKs.</p>
+<h2>3. Community Content & Moderation</h2>
+<p>Social mode is a space for user-generated content, and we work to keep it safe. Every question and answer is automatically screened against a profanity and abuse blocklist before it appears, and anything that matches is hidden. You can report any question (with a reason) and block any user directly in the App; blocking removes that user's content from your feed, and reporting a question also blocks its author. We act on reports and can remove objectionable content within 24 hours. Questions left unanswered are automatically retired after 24 hours.</p>
+<h2>4. Third-Party Services</h2>
+<p><strong>Google Firebase:</strong> Social mode, anonymous sign-in, and notifications run on Google Firebase (Cloud Firestore, Firebase Authentication, and Firebase Cloud Messaging). Google processes this data as a service provider under its privacy policy: <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a>.</p>
+<p><strong>OpenAI:</strong> Questions asked in AI mode are sent to OpenAI to generate a response; only the text of your question is sent: <a href="https://openai.com/privacy" target="_blank">openai.com/privacy</a>.</p>
+<p><strong>Apple StoreKit:</strong> Subscription purchases are handled by Apple under its privacy policy: <a href="https://www.apple.com/privacy/" target="_blank">apple.com/privacy</a>.</p>
+<h2>5. Data Storage & Retention</h2>
+<p>The local request counter stays on your device. Social content, your anonymous identifier, and your notification token are stored on Google Firebase servers. Questions left unanswered are automatically retired after 24 hours. If you delete the App, your local data is permanently removed; content already published to the Social pool may remain, but you can ask us to delete it (see below).</p>
+<h2>6. Your Choices & Data Deletion</h2>
+<p>You can turn notifications off at any time in your device Settings. Because Social accounts are anonymous, the simplest way to stop all data collection is to delete the App. To request deletion of content you have posted or of your anonymous record, email us at the address below and we will remove it.</p>
+<h2>7. Children's Privacy</h2>
+<p>Or — Decide Instantly is not directed at children under 16, and Social mode requires you to confirm that you are at least 16. We do not knowingly collect information from children.</p>
+<h2>8. Changes to This Policy</h2>
+<p>We may update this Privacy Policy from time to time. Changes will be reflected on this page with a new date.</p>
+<h2>9. Contact Us</h2>
+<p>Questions about your privacy? Contact us at: <a href="mailto:volossoftware@icloud.com">volossoftware@icloud.com</a></p>
 </div>
 
-<!-- RUSSIAN -->
+<!-- RU -->
 <div id="ru" class="lang">
 <h1>Политика конфиденциальности</h1>
-<p class="date">Последнее обновление: 21 марта 2026</p>
-<p>Настоящая Политика конфиденциальности описывает, как приложение Or - Decide Instantly ("мы", "наше" или "Приложение") обрабатывает вашу информацию.</p>
-<h2>1. Какую информацию мы собираем</h2>
-<p>Or - Decide Instantly разработан так, чтобы собирать минимум данных.</p>
-<p><strong>Ваши вопросы:</strong> Когда вы отправляете вопрос, он передается стороннему AI-сервису (OpenAI) для генерации ответа. Мы не храним ваши вопросы на наших серверах. Вопросы обрабатываются в режиме реального времени и не связаны с вашей личностью.</p>
-<p><strong>Информация о подписке:</strong> Если вы оформляете подписку Or Premium, покупка обрабатывается исключительно Apple через App Store. Мы не собираем, не храним и не имеем доступа к вашей платежной информации.</p>
-<p><strong>Данные использования:</strong> Мы храним счетчик ежедневных запросов локально на вашем устройстве. Эти данные никогда не покидают ваше устройство.</p>
-<h2>2. Какую информацию мы НЕ собираем</h2>
-<p>Мы не собираем ваше имя, адрес электронной почты, номер телефона, местоположение, контакты, фотографии, историю просмотров, идентификаторы устройства или любую другую личную информацию. Мы не создаем учетные записи пользователей. Мы не отслеживаем вас между приложениями или сайтами.</p>
-<h2>3. Сторонние сервисы</h2>
-<p><strong>OpenAI API:</strong> Ваши вопросы отправляются на серверы OpenAI для генерации ответов. Политика конфиденциальности OpenAI: <a href="https://openai.com/privacy" target="_blank">openai.com/privacy</a>.</p>
-<p><strong>Apple StoreKit:</strong> Покупки обрабатываются Apple: <a href="https://www.apple.com/privacy/" target="_blank">apple.com/privacy</a>.</p>
-<h2>4. Хранение данных</h2>
-<p>Все данные приложения хранятся локально на вашем устройстве. При удалении приложения все данные удаляются безвозвратно.</p>
-<h2>5. Конфиденциальность детей</h2>
-<p>Or - Decide Instantly не предназначен для детей младше 16 лет. Мы сознательно не собираем информацию от детей.</p>
-<h2>6. Изменения в политике</h2>
-<p>Мы можем обновлять эту Политику. Изменения будут отражены на этой странице с обновленной датой.</p>
-<h2>7. Свяжитесь с нами</h2>
-<p>Вопросы? Свяжитесь с нами: <a href="mailto:volossoftware@icloud.com">volossoftware@icloud.com</a></p>
+<p class="date">Последнее обновление: 16 июня 2026 г.</p>
+<p>Эта Политика конфиденциальности объясняет, как Or — Decide Instantly («мы», «наш» или «Приложение»), выпускаемое Volos Software Development, обрабатывает вашу информацию. Мы стремимся собирать как можно меньше данных и быть прозрачными в этом отношении. В Приложении есть два режима: режим ИИ и социальный режим, в котором пользователи задают вопросы и отвечают на вопросы друг друга.</p>
+<h2>1. Информация, которую мы собираем</h2>
+<p>Мы собираем только то, что необходимо для работы двух режимов Приложения.</p>
+<p><strong>Вопросы, которые вы задаёте в режиме ИИ:</strong> Когда вы обращаетесь к ИИ, текст вашего вопроса отправляется стороннему поставщику ИИ (OpenAI) для генерации ответа. Мы не храним эти вопросы на наших серверах; они обрабатываются в реальном времени и не связаны с вашей личностью.</p>
+<p><strong>Контент, который вы публикуете в социальном режиме:</strong> Когда вы публикуете вопрос или отвечаете на чужой, написанный вами текст (ваш вопрос и два его варианта или ваш короткий ответ) сохраняется на нашем сервере, чтобы другие пользователи могли его увидеть и ответить на него. Этот контент виден другим пользователям Приложения. Он связан только со случайным анонимным идентификатором — никогда с вашим именем или реальной личностью.</p>
+<p><strong>Анонимный аккаунт:</strong> Для работы социального режима Приложение выполняет анонимный вход через Firebase Authentication. При этом создаётся случайный идентификатор вашего устройства, не содержащий имени, адреса электронной почты или пароля. Мы используем его, чтобы связать ваши вопросы с вашим устройством (чтобы уведомлять вас, когда на них отвечают), а также для применения блокировки и модерации.</p>
+<p><strong>Токен уведомлений:</strong> Если вы разрешите уведомления, мы храним анонимный push-токен (через Firebase Cloud Messaging и Apple Push Notification service), чтобы оповещать вас, когда на ваш вопрос отвечают. Он не связан с какой-либо личной информацией.</p>
+<p><strong>Информация о подписке:</strong> Если вы оформляете подписку Or Premium, покупка полностью обрабатывается Apple через App Store. Мы никогда не собираем, не храним и не имеем доступа к вашим платёжным данным или Apple ID.</p>
+<p><strong>Данные об использовании:</strong> Мы ведём ежедневный счётчик запросов локально на вашем устройстве, чтобы контролировать лимит бесплатного тарифа. Этот счётчик никогда не покидает ваше устройство.</p>
+<h2>2. Информация, которую мы НЕ собираем</h2>
+<p>Мы не собираем личную идентифицирующую информацию: ни имя, ни адрес электронной почты, ни номер телефона, ни точное местоположение, ни контакты, ни фотографии, ни историю просмотров. Анонимный аккаунт и токен уведомлений не содержат личных данных. Мы не просим вас регистрироваться с указанием личных данных, не отслеживаем вас в других приложениях или на веб-сайтах и не используем рекламные SDK.</p>
+<h2>3. Контент сообщества и модерация</h2>
+<p>Социальный режим — это пространство для пользовательского контента, и мы работаем над тем, чтобы оно оставалось безопасным. Каждый вопрос и ответ перед публикацией автоматически проверяется по списку запрещённых нецензурных и оскорбительных выражений, и всё, что совпадает с ним, скрывается. Вы можете пожаловаться на любой вопрос (с указанием причины) и заблокировать любого пользователя прямо в Приложении; блокировка убирает контент этого пользователя из вашей ленты, а жалоба на вопрос также блокирует его автора. Мы реагируем на жалобы и можем удалить нежелательный контент в течение 24 часов. Вопросы, оставшиеся без ответа, автоматически снимаются с публикации через 24 часа.</p>
+<h2>4. Сторонние сервисы</h2>
+<p><strong>Google Firebase:</strong> Социальный режим, анонимный вход и уведомления работают на базе Google Firebase (Cloud Firestore, Firebase Authentication и Firebase Cloud Messaging). Google обрабатывает эти данные как поставщик услуг в соответствии со своей политикой конфиденциальности: <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a>.</p>
+<p><strong>OpenAI:</strong> Вопросы, заданные в режиме ИИ, отправляются в OpenAI для генерации ответа; отправляется только текст вашего вопроса: <a href="https://openai.com/privacy" target="_blank">openai.com/privacy</a>.</p>
+<p><strong>Apple StoreKit:</strong> Покупки подписок обрабатываются Apple в соответствии с её политикой конфиденциальности: <a href="https://www.apple.com/privacy/" target="_blank">apple.com/privacy</a>.</p>
+<h2>5. Хранение и срок хранения данных</h2>
+<p>Локальный счётчик запросов остаётся на вашем устройстве. Социальный контент, ваш анонимный идентификатор и ваш токен уведомлений хранятся на серверах Google Firebase. Вопросы, оставшиеся без ответа, автоматически снимаются с публикации через 24 часа. Если вы удалите Приложение, ваши локальные данные будут безвозвратно удалены; контент, уже опубликованный в социальной ленте, может сохраниться, но вы можете попросить нас удалить его (см. ниже).</p>
+<h2>6. Ваш выбор и удаление данных</h2>
+<p>Вы можете отключить уведомления в любой момент в Настройках вашего устройства. Поскольку социальные аккаунты анонимны, самый простой способ полностью прекратить сбор данных — удалить Приложение. Чтобы запросить удаление опубликованного вами контента или вашей анонимной записи, напишите нам по адресу, указанному ниже, и мы удалим их.</p>
+<h2>7. Конфиденциальность детей</h2>
+<p>Or — Decide Instantly не предназначено для детей младше 16 лет, а социальный режим требует подтверждения того, что вам не менее 16 лет. Мы сознательно не собираем информацию о детях.</p>
+<h2>8. Изменения в этой Политике</h2>
+<p>Время от времени мы можем обновлять эту Политику конфиденциальности. Изменения будут отражены на этой странице с новой датой.</p>
+<h2>9. Свяжитесь с нами</h2>
+<p>Есть вопросы о вашей конфиденциальности? Свяжитесь с нами: <a href="mailto:volossoftware@icloud.com">volossoftware@icloud.com</a></p>
 </div>
 
-<!-- GREEK -->
+<!-- EL -->
 <div id="el" class="lang">
 <h1>Πολιτική Απορρήτου</h1>
-<p class="date">Τελευταία ενημέρωση: 21 Μαρτίου 2026</p>
-<p>Η παρούσα Πολιτική Απορρήτου περιγράφει τον τρόπο με τον οποίο η εφαρμογή Or - Decide Instantly διαχειρίζεται τις πληροφορίες σας.</p>
-<h2>1. Πληροφορίες που συλλέγουμε</h2>
-<p>Η Or - Decide Instantly έχει σχεδιαστεί ώστε να συλλέγει τα ελάχιστα δυνατά δεδομένα.</p>
-<p><strong>Οι ερωτήσεις σας:</strong> Όταν υποβάλλετε μια ερώτηση, αποστέλλεται σε υπηρεσία AI τρίτου μέρους (OpenAI) για τη δημιουργία απάντησης. Δεν αποθηκεύουμε τις ερωτήσεις σας στους διακομιστές μας.</p>
-<p><strong>Πληροφορίες συνδρομής:</strong> Εάν εγγραφείτε στο Or Premium, η αγορά σας επεξεργάζεται εξ ολοκλήρου από την Apple μέσω του App Store.</p>
-<p><strong>Δεδομένα χρήσης:</strong> Αποθηκεύουμε έναν ημερήσιο μετρητή αιτημάτων τοπικά στη συσκευή σας. Αυτά τα δεδομένα δεν φεύγουν ποτέ από τη συσκευή σας.</p>
-<h2>2. Πληροφορίες που ΔΕΝ συλλέγουμε</h2>
-<p>Δεν συλλέγουμε το όνομά σας, email, τηλέφωνο, τοποθεσία, επαφές, φωτογραφίες, ιστορικό περιήγησης ή αναγνωριστικά συσκευής. Δεν δημιουργούμε λογαριασμούς χρηστών. Δεν σας παρακολουθούμε.</p>
-<h2>3. Υπηρεσίες τρίτων</h2>
-<p><strong>OpenAI API:</strong> Οι ερωτήσεις σας αποστέλλονται στους διακομιστές της OpenAI: <a href="https://openai.com/privacy" target="_blank">openai.com/privacy</a>.</p>
-<p><strong>Apple StoreKit:</strong> Οι αγορές διεκπεραιώνονται από την Apple: <a href="https://www.apple.com/privacy/" target="_blank">apple.com/privacy</a>.</p>
-<h2>4. Αποθήκευση δεδομένων</h2>
-<p>Όλα τα δεδομένα αποθηκεύονται τοπικά στη συσκευή σας. Εάν διαγράψετε την εφαρμογή, όλα τα δεδομένα διαγράφονται οριστικά.</p>
-<h2>5. Απόρρητο παιδιών</h2>
-<p>Η Or - Decide Instantly δεν απευθύνεται σε παιδιά κάτω των 16 ετών.</p>
-<h2>6. Αλλαγές στην πολιτική</h2>
-<p>Ενδέχεται να ενημερώσουμε αυτήν την Πολιτική. Οι αλλαγές θα αντικατοπτρίζονται σε αυτήν τη σελίδα.</p>
-<h2>7. Επικοινωνήστε μαζί μας</h2>
-<p>Ερωτήσεις; Επικοινωνήστε: <a href="mailto:volossoftware@icloud.com">volossoftware@icloud.com</a></p>
+<p class="date">Τελευταία ενημέρωση: 16 Ιουνίου 2026</p>
+<p>Αυτή η Πολιτική Απορρήτου εξηγεί πώς η Or — Decide Instantly ("εμείς", "μας" ή "η Εφαρμογή"), που εκδίδεται από τη Volos Software Development, διαχειρίζεται τις πληροφορίες σας. Δεσμευόμαστε να συλλέγουμε όσο το δυνατόν λιγότερα δεδομένα και να είμαστε διαφανείς σχετικά με αυτό. Η Εφαρμογή διαθέτει δύο λειτουργίες: μια λειτουργία AI και μια κοινωνική (Social) λειτουργία, όπου οι χρήστες θέτουν και απαντούν ο ένας στις ερωτήσεις του άλλου.</p>
+<h2>1. Πληροφορίες που Συλλέγουμε</h2>
+<p>Συλλέγουμε μόνο όσα είναι απαραίτητα για τη λειτουργία των δύο λειτουργιών της Εφαρμογής.</p>
+<p><strong>Ερωτήσεις που θέτετε στη λειτουργία AI:</strong> Όταν ρωτάτε το AI, το κείμενο της ερώτησής σας αποστέλλεται σε έναν τρίτο πάροχο AI (OpenAI) για τη δημιουργία μιας απάντησης. Δεν αποθηκεύουμε αυτές τις ερωτήσεις στους διακομιστές μας· επεξεργάζονται σε πραγματικό χρόνο και δεν συνδέονται με την ταυτότητά σας.</p>
+<p><strong>Περιεχόμενο που δημοσιεύετε στην κοινωνική λειτουργία:</strong> Όταν δημοσιεύετε μια ερώτηση ή απαντάτε στην ερώτηση κάποιου άλλου, το κείμενο που γράφετε (η ερώτησή σας και οι δύο επιλογές της ή η σύντομη απάντησή σας) αποθηκεύεται στους διακομιστές μας, ώστε άλλοι χρήστες να μπορούν να το δουν και να απαντήσουν. Αυτό το περιεχόμενο είναι ορατό σε άλλους χρήστες της Εφαρμογής. Συσχετίζεται μόνο με ένα τυχαίο, ανώνυμο αναγνωριστικό — ποτέ με το όνομά σας ή την πραγματική σας ταυτότητα.</p>
+<p><strong>Ανώνυμος λογαριασμός:</strong> Για τη λειτουργία της κοινωνικής λειτουργίας, η Εφαρμογή σας συνδέει ανώνυμα μέσω του Firebase Authentication. Αυτό δημιουργεί ένα τυχαίο αναγνωριστικό για τη συσκευή σας που δεν περιέχει όνομα, email ή κωδικό πρόσβασης. Το χρησιμοποιούμε για να συνδέσουμε τις ερωτήσεις σας με τη συσκευή σας (ώστε να μπορούμε να σας ειδοποιούμε όταν λαμβάνουν απάντηση) και για την επιβολή του αποκλεισμού και της εποπτείας περιεχομένου.</p>
+<p><strong>Διακριτικό ειδοποιήσεων:</strong> Εάν επιτρέπετε τις ειδοποιήσεις, αποθηκεύουμε ένα ανώνυμο διακριτικό push (μέσω του Firebase Cloud Messaging και της υπηρεσίας Apple Push Notification service), ώστε να μπορούμε να σας ειδοποιούμε όταν η ερώτησή σας λάβει απάντηση. Δεν συνδέεται με καμία προσωπική πληροφορία.</p>
+<p><strong>Πληροφορίες συνδρομής:</strong> Εάν εγγραφείτε στο Or Premium, η αγορά διεκπεραιώνεται εξ ολοκλήρου από την Apple μέσω του App Store. Δεν συλλέγουμε, δεν αποθηκεύουμε και δεν έχουμε ποτέ πρόσβαση στα στοιχεία πληρωμής σας ή στο Apple ID σας.</p>
+<p><strong>Δεδομένα χρήσης:</strong> Διατηρούμε έναν ημερήσιο μετρητή αιτημάτων τοπικά στη συσκευή σας για τη διαχείριση του ορίου της δωρεάν βαθμίδας. Αυτός ο μετρητής δεν εγκαταλείπει ποτέ τη συσκευή σας.</p>
+<h2>2. Πληροφορίες που ΔΕΝ Συλλέγουμε</h2>
+<p>Δεν συλλέγουμε στοιχεία που σας ταυτοποιούν προσωπικά: κανένα όνομα, διεύθυνση email, αριθμό τηλεφώνου, ακριβή τοποθεσία, επαφές, φωτογραφίες ή ιστορικό περιήγησης. Ο ανώνυμος λογαριασμός και το διακριτικό ειδοποιήσεων δεν περιέχουν προσωπικά δεδομένα. Δεν σας ζητάμε να εγγραφείτε με προσωπικά στοιχεία, δεν σας παρακολουθούμε σε άλλες εφαρμογές ή ιστότοπους και δεν χρησιμοποιούμε SDK διαφημίσεων.</p>
+<h2>3. Περιεχόμενο Κοινότητας & Εποπτεία</h2>
+<p>Η κοινωνική λειτουργία είναι ένας χώρος για περιεχόμενο που δημιουργείται από τους χρήστες και εργαζόμαστε για να τον διατηρούμε ασφαλή. Κάθε ερώτηση και απάντηση ελέγχεται αυτόματα έναντι μιας λίστας αποκλεισμού υβριστικού και προσβλητικού περιεχομένου πριν εμφανιστεί, και οτιδήποτε αντιστοιχεί αποκρύπτεται. Μπορείτε να αναφέρετε οποιαδήποτε ερώτηση (με αιτιολογία) και να αποκλείσετε οποιονδήποτε χρήστη απευθείας μέσα από την Εφαρμογή· ο αποκλεισμός αφαιρεί το περιεχόμενο αυτού του χρήστη από τη ροή σας, ενώ η αναφορά μιας ερώτησης αποκλείει επίσης τον δημιουργό της. Ενεργούμε βάσει των αναφορών και μπορούμε να αφαιρέσουμε προσβλητικό περιεχόμενο εντός 24 ωρών. Οι ερωτήσεις που μένουν αναπάντητες αποσύρονται αυτόματα μετά από 24 ώρες.</p>
+<h2>4. Υπηρεσίες Τρίτων</h2>
+<p><strong>Google Firebase:</strong> Η κοινωνική λειτουργία, η ανώνυμη σύνδεση και οι ειδοποιήσεις εκτελούνται στο Google Firebase (Cloud Firestore, Firebase Authentication και Firebase Cloud Messaging). Η Google επεξεργάζεται αυτά τα δεδομένα ως πάροχος υπηρεσιών σύμφωνα με την πολιτική απορρήτου της: <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a>.</p>
+<p><strong>OpenAI:</strong> Οι ερωτήσεις που τίθενται στη λειτουργία AI αποστέλλονται στην OpenAI για τη δημιουργία μιας απάντησης· αποστέλλεται μόνο το κείμενο της ερώτησής σας: <a href="https://openai.com/privacy" target="_blank">openai.com/privacy</a>.</p>
+<p><strong>Apple StoreKit:</strong> Οι αγορές συνδρομών διεκπεραιώνονται από την Apple σύμφωνα με την πολιτική απορρήτου της: <a href="https://www.apple.com/privacy/" target="_blank">apple.com/privacy</a>.</p>
+<h2>5. Αποθήκευση & Διατήρηση Δεδομένων</h2>
+<p>Ο τοπικός μετρητής αιτημάτων παραμένει στη συσκευή σας. Το κοινωνικό περιεχόμενο, το ανώνυμο αναγνωριστικό σας και το διακριτικό ειδοποιήσεών σας αποθηκεύονται σε διακομιστές του Google Firebase. Οι ερωτήσεις που μένουν αναπάντητες αποσύρονται αυτόματα μετά από 24 ώρες. Εάν διαγράψετε την Εφαρμογή, τα τοπικά σας δεδομένα αφαιρούνται οριστικά· περιεχόμενο που έχει ήδη δημοσιευθεί στη δεξαμενή της κοινωνικής λειτουργίας ενδέχεται να παραμείνει, αλλά μπορείτε να μας ζητήσετε να το διαγράψουμε (δείτε παρακάτω).</p>
+<h2>6. Οι Επιλογές σας & Διαγραφή Δεδομένων</h2>
+<p>Μπορείτε να απενεργοποιήσετε τις ειδοποιήσεις ανά πάσα στιγμή από τις Ρυθμίσεις της συσκευής σας. Επειδή οι λογαριασμοί της κοινωνικής λειτουργίας είναι ανώνυμοι, ο απλούστερος τρόπος για να σταματήσετε κάθε συλλογή δεδομένων είναι να διαγράψετε την Εφαρμογή. Για να ζητήσετε τη διαγραφή περιεχομένου που έχετε δημοσιεύσει ή της ανώνυμης εγγραφής σας, στείλτε μας email στη διεύθυνση παρακάτω και θα το αφαιρέσουμε.</p>
+<h2>7. Απόρρητο Παιδιών</h2>
+<p>Η Or — Decide Instantly δεν απευθύνεται σε παιδιά κάτω των 16 ετών, και η κοινωνική λειτουργία απαιτεί να επιβεβαιώσετε ότι είστε τουλάχιστον 16 ετών. Δεν συλλέγουμε εν γνώσει μας πληροφορίες από παιδιά.</p>
+<h2>8. Αλλαγές σε αυτήν την Πολιτική</h2>
+<p>Ενδέχεται να ενημερώνουμε αυτήν την Πολιτική Απορρήτου κατά καιρούς. Οι αλλαγές θα αντικατοπτρίζονται σε αυτήν τη σελίδα με νέα ημερομηνία.</p>
+<h2>9. Επικοινωνία</h2>
+<p>Ερωτήσεις σχετικά με το απόρρητό σας; Επικοινωνήστε μαζί μας στο: <a href="mailto:volossoftware@icloud.com">volossoftware@icloud.com</a></p>
 </div>
 
-<!-- GERMAN -->
+<!-- DE -->
 <div id="de" class="lang">
-<h1>Datenschutzrichtlinie</h1>
-<p class="date">Letzte Aktualisierung: 21. März 2026</p>
-<p>Diese Datenschutzrichtlinie beschreibt, wie Or - Decide Instantly Ihre Informationen verarbeitet.</p>
+<h1>Datenschutzerklärung</h1>
+<p class="date">Zuletzt aktualisiert: 16. Juni 2026</p>
+<p>Diese Datenschutzerklärung erläutert, wie Or — Decide Instantly ("wir", "uns" oder "die App"), herausgegeben von Volos Software Development, mit Ihren Informationen umgeht. Wir verpflichten uns, so wenige Daten wie möglich zu erheben und dabei transparent zu sein. Die App verfügt über zwei Modi: einen KI-Modus und einen Social-Modus, in dem Nutzer einander Fragen stellen und beantworten.</p>
 <h2>1. Informationen, die wir erheben</h2>
-<p>Or - Decide Instantly ist so konzipiert, dass möglichst wenige Daten erhoben werden.</p>
-<p><strong>Ihre Fragen:</strong> Wenn Sie eine Frage stellen, wird sie an einen KI-Dienst eines Drittanbieters (OpenAI) gesendet. Wir speichern Ihre Fragen nicht auf unseren Servern.</p>
-<p><strong>Abonnement-Informationen:</strong> Wenn Sie Or Premium abonnieren, wird der Kauf vollständig von Apple über den App Store abgewickelt.</p>
-<p><strong>Nutzungsdaten:</strong> Wir speichern einen täglichen Anfragezähler lokal auf Ihrem Gerät. Diese Daten verlassen niemals Ihr Gerät.</p>
+<p>Wir erheben nur das, was für den Betrieb der beiden Modi der App erforderlich ist.</p>
+<p><strong>Fragen, die Sie im KI-Modus stellen:</strong> Wenn Sie die KI befragen, wird der Text Ihrer Frage an einen KI-Drittanbieter (OpenAI) gesendet, um eine Antwort zu erzeugen. Wir speichern diese Fragen nicht auf unseren Servern; sie werden in Echtzeit verarbeitet und nicht mit Ihrer Identität verknüpft.</p>
+<p><strong>Inhalte, die Sie im Social-Modus veröffentlichen:</strong> Wenn Sie eine Frage veröffentlichen oder die Frage einer anderen Person beantworten, wird der von Ihnen verfasste Text (Ihre Frage und ihre beiden Optionen oder Ihre kurze Antwort) auf unserem Backend gespeichert, damit andere Nutzer ihn sehen und darauf reagieren können. Diese Inhalte sind für andere Nutzer der App sichtbar. Sie werden ausschließlich mit einer zufälligen, anonymen Kennung verknüpft — niemals mit Ihrem Namen oder Ihrer echten Identität.</p>
+<p><strong>Anonymes Konto:</strong> Um den Social-Modus zu betreiben, meldet die App Sie anonym über Firebase Authentication an. Dadurch wird eine zufällige Kennung für Ihr Gerät erstellt, die weder Namen noch E-Mail-Adresse oder Passwort enthält. Wir nutzen sie, um Ihre Fragen mit Ihrem Gerät zu verknüpfen (damit wir Sie benachrichtigen können, wenn sie beantwortet werden) und um Blockierungen und Moderation durchzusetzen.</p>
+<p><strong>Benachrichtigungs-Token:</strong> Wenn Sie Benachrichtigungen zulassen, speichern wir einen anonymen Push-Token (über Firebase Cloud Messaging und den Apple Push Notification service), damit wir Sie benachrichtigen können, wenn Ihre Frage beantwortet wird. Er ist mit keinerlei personenbezogenen Informationen verknüpft.</p>
+<p><strong>Abonnementinformationen:</strong> Wenn Sie Or Premium abonnieren, wird der Kauf vollständig von Apple über den App Store abgewickelt. Wir erheben oder speichern Ihre Zahlungsdaten oder Ihre Apple ID zu keinem Zeitpunkt und haben keinen Zugriff darauf.</p>
+<p><strong>Nutzungsdaten:</strong> Wir führen lokal auf Ihrem Gerät einen täglichen Anfragenzähler, um das Limit der kostenlosen Stufe zu verwalten. Dieser Zähler verlässt Ihr Gerät niemals.</p>
 <h2>2. Informationen, die wir NICHT erheben</h2>
-<p>Wir erheben nicht Ihren Namen, E-Mail-Adresse, Telefonnummer, Standort, Kontakte, Fotos, Browserverlauf oder Gerätekennungen. Wir erstellen keine Benutzerkonten. Wir verfolgen Sie nicht.</p>
-<h2>3. Drittanbieter-Dienste</h2>
-<p><strong>OpenAI API:</strong> Ihre Fragen werden an OpenAI gesendet: <a href="https://openai.com/privacy" target="_blank">openai.com/privacy</a>.</p>
-<p><strong>Apple StoreKit:</strong> Käufe werden von Apple abgewickelt: <a href="https://www.apple.com/privacy/" target="_blank">apple.com/privacy</a>.</p>
-<h2>4. Datenspeicherung</h2>
-<p>Alle App-Daten werden lokal auf Ihrem Gerät gespeichert. Wenn Sie die App löschen, werden alle Daten dauerhaft entfernt.</p>
-<h2>5. Datenschutz für Kinder</h2>
-<p>Or - Decide Instantly richtet sich nicht an Kinder unter 16 Jahren.</p>
-<h2>6. Änderungen dieser Richtlinie</h2>
-<p>Wir können diese Richtlinie aktualisieren. Änderungen werden auf dieser Seite angezeigt.</p>
-<h2>7. Kontaktieren Sie uns</h2>
-<p>Fragen? Kontaktieren Sie uns: <a href="mailto:volossoftware@icloud.com">volossoftware@icloud.com</a></p>
+<p>Wir erheben keine personenbezogenen Daten: keinen Namen, keine E-Mail-Adresse, keine Telefonnummer, keinen genauen Standort, keine Kontakte, keine Fotos und keinen Browserverlauf. Das anonyme Konto und der Benachrichtigungs-Token enthalten keinerlei personenbezogene Daten. Wir verlangen von Ihnen keine Registrierung mit persönlichen Angaben, wir verfolgen Sie nicht über andere Apps oder Websites hinweg und wir verwenden keine Werbe-SDKs.</p>
+<h2>3. Community-Inhalte und Moderation</h2>
+<p>Der Social-Modus ist ein Raum für nutzergenerierte Inhalte, und wir setzen uns dafür ein, ihn sicher zu halten. Jede Frage und jede Antwort wird automatisch anhand einer Sperrliste für Schimpfwörter und Missbrauch überprüft, bevor sie erscheint, und alles, was darauf zutrifft, wird ausgeblendet. Sie können jede Frage (mit Angabe eines Grundes) melden und jeden Nutzer direkt in der App blockieren; durch das Blockieren werden die Inhalte dieses Nutzers aus Ihrem Feed entfernt, und das Melden einer Frage blockiert zugleich deren Verfasser. Wir reagieren auf Meldungen und können anstößige Inhalte innerhalb von 24 Stunden entfernen. Unbeantwortete Fragen werden nach 24 Stunden automatisch entfernt.</p>
+<h2>4. Dienste von Drittanbietern</h2>
+<p><strong>Google Firebase:</strong> Der Social-Modus, die anonyme Anmeldung und die Benachrichtigungen laufen über Google Firebase (Cloud Firestore, Firebase Authentication und Firebase Cloud Messaging). Google verarbeitet diese Daten als Dienstleister gemäß seiner Datenschutzerklärung: <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a>.</p>
+<p><strong>OpenAI:</strong> Im KI-Modus gestellte Fragen werden an OpenAI gesendet, um eine Antwort zu erzeugen; übermittelt wird ausschließlich der Text Ihrer Frage: <a href="https://openai.com/privacy" target="_blank">openai.com/privacy</a>.</p>
+<p><strong>Apple StoreKit:</strong> Abonnementkäufe werden von Apple gemäß seiner Datenschutzerklärung abgewickelt: <a href="https://www.apple.com/privacy/" target="_blank">apple.com/privacy</a>.</p>
+<h2>5. Datenspeicherung und Aufbewahrung</h2>
+<p>Der lokale Anfragenzähler verbleibt auf Ihrem Gerät. Social-Inhalte, Ihre anonyme Kennung und Ihr Benachrichtigungs-Token werden auf den Servern von Google Firebase gespeichert. Unbeantwortete Fragen werden nach 24 Stunden automatisch entfernt. Wenn Sie die App löschen, werden Ihre lokalen Daten dauerhaft entfernt; bereits im Social-Pool veröffentlichte Inhalte können bestehen bleiben, Sie können uns jedoch um deren Löschung bitten (siehe unten).</p>
+<h2>6. Ihre Wahlmöglichkeiten und Datenlöschung</h2>
+<p>Sie können Benachrichtigungen jederzeit in den Einstellungen Ihres Geräts deaktivieren. Da Social-Konten anonym sind, ist die einfachste Möglichkeit, jegliche Datenerhebung zu beenden, die App zu löschen. Um die Löschung von Inhalten, die Sie veröffentlicht haben, oder Ihres anonymen Datensatzes zu beantragen, schreiben Sie uns an die unten angegebene Adresse, und wir werden sie entfernen.</p>
+<h2>7. Privatsphäre von Kindern</h2>
+<p>Or — Decide Instantly richtet sich nicht an Kinder unter 16 Jahren, und der Social-Modus erfordert, dass Sie bestätigen, mindestens 16 Jahre alt zu sein. Wir erheben wissentlich keine Informationen von Kindern.</p>
+<h2>8. Änderungen dieser Erklärung</h2>
+<p>Wir können diese Datenschutzerklärung von Zeit zu Zeit aktualisieren. Änderungen werden auf dieser Seite mit einem neuen Datum kenntlich gemacht.</p>
+<h2>9. Kontaktieren Sie uns</h2>
+<p>Fragen zu Ihrer Privatsphäre? Kontaktieren Sie uns unter: <a href="mailto:volossoftware@icloud.com">volossoftware@icloud.com</a></p>
 </div>
 
-<!-- UKRAINIAN -->
+<!-- UK -->
 <div id="uk" class="lang">
 <h1>Політика конфіденційності</h1>
-<p class="date">Останнє оновлення: 21 березня 2026</p>
-<p>Ця Політика конфіденційності описує, як додаток Or - Decide Instantly обробляє вашу інформацію.</p>
-<h2>1. Яку інформацію ми збираємо</h2>
-<p>Or - Decide Instantly розроблений так, щоб збирати мінімум даних.</p>
-<p><strong>Ваші запитання:</strong> Коли ви надсилаєте запитання, воно передається стороннньому AI-сервісу (OpenAI) для генерації відповіді. Ми не зберігаємо ваші запитання на наших серверах.</p>
-<p><strong>Інформація про підписку:</strong> Якщо ви оформлюєте підписку Or Premium, покупка обробляється виключно Apple через App Store.</p>
-<p><strong>Дані використання:</strong> Ми зберігаємо лічильник щоденних запитів локально на вашому пристрої. Ці дані ніколи не покидають ваш пристрій.</p>
-<h2>2. Яку інформацію ми НЕ збираємо</h2>
-<p>Ми не збираємо ваше ім'я, email, телефон, місцезнаходження, контакти, фото, історію перегляду або ідентифікатори пристрою. Ми не створюємо облікові записи. Ми не відстежуємо вас.</p>
-<h2>3. Сторонні сервіси</h2>
-<p><strong>OpenAI API:</strong> Ваші запитання надсилаються на сервери OpenAI: <a href="https://openai.com/privacy" target="_blank">openai.com/privacy</a>.</p>
-<p><strong>Apple StoreKit:</strong> Покупки обробляються Apple: <a href="https://www.apple.com/privacy/" target="_blank">apple.com/privacy</a>.</p>
-<h2>4. Зберігання даних</h2>
-<p>Усі дані зберігаються локально на вашому пристрої. При видаленні додатку всі дані видаляються назавжди.</p>
-<h2>5. Конфіденційність дітей</h2>
-<p>Or - Decide Instantly не призначений для дітей молодше 16 років.</p>
-<h2>6. Зміни в політиці</h2>
-<p>Ми можемо оновлювати цю Політику. Зміни будуть відображені на цій сторінці.</p>
-<h2>7. Зв'яжіться з нами</h2>
-<p>Питання? Зв'яжіться: <a href="mailto:volossoftware@icloud.com">volossoftware@icloud.com</a></p>
+<p class="date">Останнє оновлення: 16 червня 2026 р.</p>
+<p>Ця Політика конфіденційності пояснює, як Or — Decide Instantly («ми», «наш» або «Застосунок»), що видається Volos Software Development, поводиться з вашою інформацією. Ми прагнемо збирати якомога менше даних і бути прозорими щодо цього. Застосунок має два режими: режим ШІ та Соціальний режим, у якому користувачі ставлять одне одному запитання й відповідають на них.</p>
+<h2>1. Інформація, яку ми збираємо</h2>
+<p>Ми збираємо лише те, що необхідно для роботи двох режимів Застосунку.</p>
+<p><strong>Запитання, які ви ставите в режимі ШІ:</strong> Коли ви звертаєтеся до ШІ, текст вашого запитання надсилається сторонньому постачальнику ШІ (OpenAI) для генерування відповіді. Ми не зберігаємо ці запитання на наших серверах; вони обробляються в реальному часі й не пов’язуються з вашою особою.</p>
+<p><strong>Контент, який ви публікуєте в Соціальному режимі:</strong> Коли ви публікуєте запитання або відповідаєте на чуже, написаний вами текст (ваше запитання та два його варіанти або ваша коротка відповідь) зберігається на нашому бекенді, щоб інші користувачі могли його бачити й відповідати на нього. Цей контент видимий іншим користувачам Застосунку. Він пов’язується лише з випадковим анонімним ідентифікатором — ніколи з вашим іменем чи справжньою особою.</p>
+<p><strong>Анонімний обліковий запис:</strong> Для роботи Соціального режиму Застосунок виконує ваш анонімний вхід через Firebase Authentication. Це створює випадковий ідентифікатор для вашого пристрою, який не містить імені, електронної пошти чи пароля. Ми використовуємо його, щоб пов’язати ваші запитання з вашим пристроєм (аби сповіщати вас, коли на них відповідають), а також для забезпечення блокування та модерації.</p>
+<p><strong>Токен сповіщень:</strong> Якщо ви дозволите сповіщення, ми зберігаємо анонімний push-токен (через Firebase Cloud Messaging та Apple Push Notification service), щоб ми могли повідомити вас, коли на ваше запитання відповіли. Він не пов’язаний із жодною персональною інформацією.</p>
+<p><strong>Інформація про підписку:</strong> Якщо ви оформлюєте підписку Or Premium, покупка повністю обробляється Apple через App Store. Ми ніколи не збираємо, не зберігаємо й не маємо доступу до ваших платіжних даних чи Apple ID.</p>
+<p><strong>Дані про використання:</strong> Ми ведемо щоденний лічильник запитів локально на вашому пристрої, щоб керувати лімітом безкоштовного тарифу. Цей лічильник ніколи не залишає ваш пристрій.</p>
+<h2>2. Інформація, яку ми НЕ збираємо</h2>
+<p>Ми не збираємо інформацію, що ідентифікує особу: ані ім’я, ані адресу електронної пошти, ані номер телефону, ані точне місцезнаходження, ані контакти, ані фотографії, ані історію перегляду. Анонімний обліковий запис і токен сповіщень не містять персональних даних. Ми не просимо вас реєструватися з персональними даними, не відстежуємо вас в інших застосунках чи на вебсайтах і не використовуємо рекламні SDK.</p>
+<h2>3. Контент спільноти та модерація</h2>
+<p>Соціальний режим — це простір для контенту, створеного користувачами, і ми працюємо над тим, щоб зберігати його безпечним. Кожне запитання та відповідь автоматично перевіряються за списком заблокованих нецензурних і образливих слів, перш ніж з’явитися, і все, що збігається, приховується. Ви можете поскаржитися на будь-яке запитання (із зазначенням причини) та заблокувати будь-якого користувача безпосередньо в Застосунку; блокування прибирає контент цього користувача з вашої стрічки, а скарга на запитання також блокує його автора. Ми реагуємо на скарги й можемо видалити неприйнятний контент протягом 24 годин. Запитання, що залишилися без відповіді, автоматично знімаються через 24 години.</p>
+<h2>4. Сторонні сервіси</h2>
+<p><strong>Google Firebase:</strong> Соціальний режим, анонімний вхід і сповіщення працюють на Google Firebase (Cloud Firestore, Firebase Authentication та Firebase Cloud Messaging). Google обробляє ці дані як постачальник послуг відповідно до своєї політики конфіденційності: <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a>.</p>
+<p><strong>OpenAI:</strong> Запитання, поставлені в режимі ШІ, надсилаються до OpenAI для генерування відповіді; надсилається лише текст вашого запитання: <a href="https://openai.com/privacy" target="_blank">openai.com/privacy</a>.</p>
+<p><strong>Apple StoreKit:</strong> Покупки підписок обробляються Apple відповідно до її політики конфіденційності: <a href="https://www.apple.com/privacy/" target="_blank">apple.com/privacy</a>.</p>
+<h2>5. Зберігання та строки зберігання даних</h2>
+<p>Локальний лічильник запитів залишається на вашому пристрої. Соціальний контент, ваш анонімний ідентифікатор і токен сповіщень зберігаються на серверах Google Firebase. Запитання, що залишилися без відповіді, автоматично знімаються через 24 години. Якщо ви видалите Застосунок, ваші локальні дані буде остаточно знищено; контент, уже опублікований у соціальній стрічці, може залишитися, але ви можете попросити нас видалити його (див. нижче).</p>
+<h2>6. Ваш вибір і видалення даних</h2>
+<p>Ви можете будь-коли вимкнути сповіщення в Налаштуваннях вашого пристрою. Оскільки соціальні облікові записи є анонімними, найпростіший спосіб припинити будь-яке збирання даних — це видалити Застосунок. Щоб запитати видалення опублікованого вами контенту або вашого анонімного запису, напишіть нам на адресу, наведену нижче, і ми його видалимо.</p>
+<h2>7. Конфіденційність дітей</h2>
+<p>Or — Decide Instantly не призначений для дітей віком до 16 років, а Соціальний режим вимагає підтвердження того, що вам щонайменше 16 років. Ми свідомо не збираємо інформацію від дітей.</p>
+<h2>8. Зміни до цієї Політики</h2>
+<p>Ми можемо час від часу оновлювати цю Політику конфіденційності. Зміни відображатимуться на цій сторінці з новою датою.</p>
+<h2>9. Зв’яжіться з нами</h2>
+<p>Маєте запитання щодо вашої конфіденційності? Зв’яжіться з нами: <a href="mailto:volossoftware@icloud.com">volossoftware@icloud.com</a></p>
 </div>
 
-<!-- CHINESE -->
+<!-- ZH -->
 <div id="zh" class="lang">
 <h1>隐私政策</h1>
-<p class="date">最后更新：2026年3月21日</p>
-<p>本隐私政策描述了 Or - Decide Instantly 如何处理您的信息。</p>
+<p class="date">最后更新于 2026 年 6 月 16 日</p>
+<p>本隐私政策说明由 Volos Software Development 发布的 Or — Decide Instantly（以下简称"我们"或"本应用"）如何处理您的信息。我们致力于尽可能少地收集数据，并对此保持透明。本应用包含两种模式：AI 模式，以及用户互相提问和回答问题的社交模式。</p>
 <h2>1. 我们收集的信息</h2>
-<p>Or - Decide Instantly 旨在尽可能少地收集数据。</p>
-<p><strong>您的问题：</strong>当您提交问题时，它会被发送到第三方 AI 服务（OpenAI）以生成回答。我们不会在服务器上存储您的问题。</p>
-<p><strong>订阅信息：</strong>如果您订阅 Or Premium，购买完全由 Apple 通过 App Store 处理。</p>
-<p><strong>使用数据：</strong>我们在您的设备上本地存储每日请求计数器。这些数据永远不会离开您的设备。</p>
+<p>我们仅收集运行本应用两种模式所必需的信息。</p>
+<p><strong>您在 AI 模式中提出的问题：</strong> 当您向 AI 提问时，您的问题文本会被发送至第三方 AI 服务商（OpenAI）以生成回应。我们不会将这些问题存储在我们的服务器上；它们会被实时处理，且不会与您的身份相关联。</p>
+<p><strong>您在社交模式中发布的内容：</strong> 当您发布问题，或回答他人的问题时，您所撰写的文本（您的问题及其两个选项，或您的简短回答）会被存储在我们的后端，以便其他用户能够查看并作出回应。这些内容对本应用的其他用户可见。它仅与一个随机的匿名标识符相关联，绝不会与您的姓名或真实身份相关联。</p>
+<p><strong>匿名账户：</strong> 为运行社交模式，本应用会通过 Firebase Authentication 为您进行匿名登录。这会为您的设备生成一个随机标识符，其中不含任何姓名、电子邮箱或密码。我们使用它将您的问题与您的设备关联（以便在问题被回答时通知您），并用于执行屏蔽与内容审核。</p>
+<p><strong>通知令牌：</strong> 如果您允许通知，我们会存储一个匿名推送令牌（通过 Firebase Cloud Messaging 和 Apple Push Notification service），以便在您的问题被回答时提醒您。该令牌不会与任何个人信息相关联。</p>
+<p><strong>订阅信息：</strong> 如果您订阅 Or Premium，购买事宜完全由 Apple 通过 App Store 处理。我们绝不会收集、存储或获取您的付款详情或 Apple ID。</p>
+<p><strong>使用数据：</strong> 我们会在您的设备本地保留一个每日请求计数器，用于管理免费档位的使用限额。该计数器绝不会离开您的设备。</p>
 <h2>2. 我们不收集的信息</h2>
-<p>我们不收集您的姓名、电子邮件、电话号码、位置、联系人、照片、浏览历史或设备标识符。我们不创建用户帐户。我们不跟踪您。</p>
-<h2>3. 第三方服务</h2>
-<p><strong>OpenAI API：</strong>您的问题被发送到 OpenAI 的服务器：<a href="https://openai.com/privacy" target="_blank">openai.com/privacy</a>。</p>
-<p><strong>Apple StoreKit：</strong>购买由 Apple 处理：<a href="https://www.apple.com/privacy/" target="_blank">apple.com/privacy</a>。</p>
-<h2>4. 数据存储</h2>
-<p>所有应用数据存储在您的设备上。删除应用后，所有数据将被永久删除。</p>
-<h2>5. 儿童隐私</h2>
-<p>Or - Decide Instantly 不面向16岁以下的儿童。</p>
-<h2>6. 政策变更</h2>
-<p>我们可能会更新本隐私政策。更改将在此页面上反映。</p>
-<h2>7. 联系我们</h2>
-<p>有问题？联系我们：<a href="mailto:volossoftware@icloud.com">volossoftware@icloud.com</a></p>
+<p>我们不收集可识别个人身份的信息：不收集姓名、电子邮箱地址、电话号码、精确位置、通讯录、照片或浏览记录。匿名账户和通知令牌均不含任何个人数据。我们不会要求您使用个人信息进行注册，不会在其他应用或网站上追踪您，也不会使用广告 SDK。</p>
+<h2>3. 社区内容与审核</h2>
+<p>社交模式是一个供用户生成内容的空间，我们致力于保障其安全。每个问题和回答在显示之前都会根据脏话与辱骂屏蔽词库进行自动筛查，任何命中的内容都会被隐藏。您可以在应用内直接举报任何问题（并说明理由）以及屏蔽任何用户；屏蔽会将该用户的内容从您的信息流中移除，而举报某个问题也会同时屏蔽其作者。我们会对举报采取行动，并能够在 24 小时内移除不当内容。无人回答的问题会在 24 小时后自动下架。</p>
+<h2>4. 第三方服务</h2>
+<p><strong>Google Firebase：</strong> 社交模式、匿名登录和通知功能运行于 Google Firebase（Cloud Firestore、Firebase Authentication 和 Firebase Cloud Messaging）之上。Google 作为服务提供方，依据其隐私政策处理这些数据： <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a>.</p>
+<p><strong>OpenAI：</strong> 在 AI 模式中提出的问题会被发送至 OpenAI 以生成回应；仅发送您问题的文本： <a href="https://openai.com/privacy" target="_blank">openai.com/privacy</a>.</p>
+<p><strong>Apple StoreKit：</strong> 订阅购买由 Apple 依据其隐私政策处理： <a href="https://www.apple.com/privacy/" target="_blank">apple.com/privacy</a>.</p>
+<h2>5. 数据存储与保留</h2>
+<p>本地请求计数器保留在您的设备上。社交内容、您的匿名标识符以及您的通知令牌存储在 Google Firebase 服务器上。无人回答的问题会在 24 小时后自动下架。如果您删除本应用，您的本地数据将被永久移除；已发布到社交内容池中的内容可能仍会保留，但您可以请求我们删除它（详见下文）。</p>
+<h2>6. 您的选择与数据删除</h2>
+<p>您可以随时在设备的"设置"中关闭通知。由于社交账户为匿名账户，停止所有数据收集的最简单方式就是删除本应用。如需请求删除您发布的内容或您的匿名记录，请发送电子邮件至下方地址，我们将予以移除。</p>
+<h2>7. 儿童隐私</h2>
+<p>Or — Decide Instantly 并非面向 16 岁以下儿童，且社交模式要求您确认已年满 16 周岁。我们不会在知情的情况下收集儿童的信息。</p>
+<h2>8. 本政策的变更</h2>
+<p>我们可能会不时更新本隐私政策。变更将在本页面上体现，并标注新的日期。</p>
+<h2>9. 联系我们</h2>
+<p>对您的隐私有疑问？请联系我们： <a href="mailto:volossoftware@icloud.com">volossoftware@icloud.com</a></p>
 </div>
 
-<!-- JAPANESE -->
+<!-- JA -->
 <div id="ja" class="lang">
 <h1>プライバシーポリシー</h1>
-<p class="date">最終更新：2026年3月21日</p>
-<p>このプライバシーポリシーは、Or - Decide Instantly がお客様の情報をどのように取り扱うかを説明します。</p>
-<h2>1. 収集する情報</h2>
-<p>Or - Decide Instantly はできる限り少ないデータを収集するよう設計されています。</p>
-<p><strong>お客様の質問：</strong>質問を送信すると、サードパーティのAIサービス（OpenAI）に送信されます。質問はサーバーに保存されません。</p>
-<p><strong>サブスクリプション情報：</strong>Or Premium に登録した場合、購入は Apple が App Store を通じて処理します。</p>
-<p><strong>利用データ：</strong>デバイスにローカルで日次リクエストカウンターを保存します。このデータはデバイスから外に出ることはありません。</p>
-<h2>2. 収集しない情報</h2>
-<p>お名前、メールアドレス、電話番号、位置情報、連絡先、写真、閲覧履歴、デバイス識別子は収集しません。ユーザーアカウントは作成しません。追跡しません。</p>
-<h2>3. サードパーティサービス</h2>
-<p><strong>OpenAI API：</strong>質問はOpenAIのサーバーに送信されます：<a href="https://openai.com/privacy" target="_blank">openai.com/privacy</a>。</p>
-<p><strong>Apple StoreKit：</strong>購入はAppleが処理します：<a href="https://www.apple.com/privacy/" target="_blank">apple.com/privacy</a>。</p>
-<h2>4. データ保存</h2>
-<p>すべてのアプリデータはデバイスにローカル保存されます。アプリを削除すると、すべてのデータが永久に削除されます。</p>
-<h2>5. 子どものプライバシー</h2>
-<p>Or - Decide Instantly は16歳未満の子どもを対象としていません。</p>
-<h2>6. ポリシーの変更</h2>
-<p>このプライバシーポリシーは随時更新される場合があります。変更はこのページに反映されます。</p>
-<h2>7. お問い合わせ</h2>
-<p>ご質問は：<a href="mailto:volossoftware@icloud.com">volossoftware@icloud.com</a></p>
+<p class="date">最終更新日：2026年6月16日</p>
+<p>本プライバシーポリシーは、Volos Software Development が提供する Or — Decide Instantly（以下「当社」「私たち」または「本アプリ」）が、お客様の情報をどのように取り扱うかについて説明するものです。当社は、収集するデータを可能な限り最小限に抑え、その取り扱いについて透明性を保つことをお約束します。本アプリには、AIモードと、ユーザー同士が互いの質問を投稿し回答するソーシャルモードの2つのモードがあります。</p>
+<h2>1. 当社が収集する情報</h2>
+<p>当社は、本アプリの2つのモードを運営するために必要な情報のみを収集します。</p>
+<p><strong>AIモードでお客様が行う質問：</strong> AIに質問すると、その質問のテキストは回答を生成するために第三者のAIプロバイダー（OpenAI）に送信されます。これらの質問が当社のサーバーに保存されることはありません。質問はリアルタイムで処理され、お客様の身元と紐付けられることもありません。</p>
+<p><strong>ソーシャルモードでお客様が投稿するコンテンツ：</strong> 質問を投稿したり、他のユーザーの質問に回答したりすると、お客様が入力したテキスト（質問とその2つの選択肢、または短い回答）は、他のユーザーが閲覧して応答できるよう、当社のバックエンドに保存されます。このコンテンツは本アプリの他のユーザーに表示されます。このコンテンツはランダムな匿名識別子とのみ関連付けられ、お客様の氏名や実際の身元と結び付けられることは一切ありません。</p>
+<p><strong>匿名アカウント：</strong> ソーシャルモードを運営するため、本アプリは Firebase Authentication を通じてお客様を匿名でサインインさせます。これにより、氏名・メールアドレス・パスワードを一切含まない、お客様の端末用のランダムな識別子が作成されます。当社はこの識別子を、お客様の質問を端末に紐付けるため（質問に回答があった際に通知できるようにするため）、およびブロックやモデレーションを実施するために使用します。</p>
+<p><strong>通知トークン：</strong> 通知を許可された場合、お客様の質問に回答があった際にお知らせできるよう、当社は匿名のプッシュトークンを（Firebase Cloud Messaging および Apple Push Notification service を通じて）保存します。このトークンはいかなる個人情報とも紐付けられません。</p>
+<p><strong>サブスクリプション情報：</strong> Or Premium にご登録いただく場合、購入手続きはすべて App Store を通じて Apple によって処理されます。当社がお客様の支払い情報や Apple ID を収集・保存したり、これらにアクセスしたりすることは一切ありません。</p>
+<p><strong>利用データ：</strong> 当社は、無料プランの上限を管理するため、1日あたりのリクエスト数を数えるカウンターをお客様の端末内にローカルで保持します。このカウンターがお客様の端末の外に出ることはありません。</p>
+<h2>2. 当社が収集しない情報</h2>
+<p>当社は、氏名、メールアドレス、電話番号、正確な位置情報、連絡先、写真、閲覧履歴といった個人を特定できる情報を収集しません。匿名アカウントおよび通知トークンには個人データは一切含まれません。当社は、個人情報を用いた登録をお願いすることはなく、他のアプリやウェブサイトをまたいでお客様を追跡することもなく、広告SDKを使用することもありません。</p>
+<h2>3. コミュニティコンテンツとモデレーション</h2>
+<p>ソーシャルモードはユーザー生成コンテンツのための場であり、当社はその安全性の維持に努めています。すべての質問と回答は、表示される前に冒涜的・侮辱的な表現のブロックリストに照らして自動的に審査され、該当するものは非表示にされます。お客様は、本アプリ内で任意の質問を（理由を添えて）報告したり、任意のユーザーをブロックしたりすることができます。ブロックすると、そのユーザーのコンテンツはお客様のフィードから削除されます。また、質問を報告すると、その投稿者も併せてブロックされます。当社は報告に対応し、不適切なコンテンツを24時間以内に削除することができます。回答が付かないまま残された質問は、24時間後に自動的に取り下げられます。</p>
+<h2>4. 第三者サービス</h2>
+<p><strong>Google Firebase：</strong> ソーシャルモード、匿名サインイン、および通知は、Google Firebase（Cloud Firestore、Firebase Authentication、Firebase Cloud Messaging）上で動作します。Google はサービスプロバイダーとして、自社のプライバシーポリシーに基づきこれらのデータを処理します： <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a>.</p>
+<p><strong>OpenAI：</strong> AIモードで行われた質問は、回答を生成するために OpenAI に送信されます。送信されるのはお客様の質問のテキストのみです： <a href="https://openai.com/privacy" target="_blank">openai.com/privacy</a>.</p>
+<p><strong>Apple StoreKit：</strong> サブスクリプションの購入は、Apple のプライバシーポリシーに基づき Apple によって処理されます： <a href="https://www.apple.com/privacy/" target="_blank">apple.com/privacy</a>.</p>
+<h2>5. データの保存と保持</h2>
+<p>ローカルのリクエストカウンターはお客様の端末内に留まります。ソーシャルコンテンツ、お客様の匿名識別子、および通知トークンは、Google Firebase のサーバーに保存されます。回答が付かないまま残された質問は、24時間後に自動的に取り下げられます。本アプリを削除した場合、お客様の端末内のローカルデータは完全に削除されますが、すでにソーシャルプールに投稿されたコンテンツは残る場合があります。ただし、当社にその削除をご依頼いただくことが可能です（下記参照）。</p>
+<h2>6. お客様の選択とデータの削除</h2>
+<p>通知はいつでも端末の「設定」からオフにできます。ソーシャルアカウントは匿名であるため、すべてのデータ収集を停止する最も簡単な方法は、本アプリを削除することです。お客様が投稿したコンテンツや匿名記録の削除をご希望の場合は、下記のアドレスまでメールでご連絡いただければ、当社が削除いたします。</p>
+<h2>7. 子どものプライバシー</h2>
+<p>Or — Decide Instantly は16歳未満の子どもを対象としておらず、ソーシャルモードのご利用には16歳以上であることの確認が必要です。当社は、子どもから故意に情報を収集することはありません。</p>
+<h2>8. 本ポリシーの変更</h2>
+<p>当社は、本プライバシーポリシーを随時更新することがあります。変更内容は、新しい日付とともに本ページに反映されます。</p>
+<h2>9. お問い合わせ</h2>
+<p>プライバシーに関するご質問は、以下までお問い合わせください： <a href="mailto:volossoftware@icloud.com">volossoftware@icloud.com</a></p>
 </div>
 
-<!-- KOREAN -->
+<!-- KO -->
 <div id="ko" class="lang">
 <h1>개인정보 처리방침</h1>
-<p class="date">최종 업데이트: 2026년 3월 21일</p>
-<p>본 개인정보 처리방침은 Or - Decide Instantly이 귀하의 정보를 어떻게 처리하는지 설명합니다.</p>
-<h2>1. 수집하는 정보</h2>
-<p>Or - Decide Instantly은 최소한의 데이터를 수집하도록 설계되었습니다.</p>
-<p><strong>귀하의 질문:</strong> 질문을 제출하면 제3자 AI 서비스(OpenAI)로 전송됩니다. 질문은 서버에 저장되지 않습니다.</p>
-<p><strong>구독 정보:</strong> Or Premium을 구독하면 구매는 Apple이 App Store를 통해 처리합니다.</p>
-<p><strong>사용 데이터:</strong> 기기에 일일 요청 카운터를 로컬로 저장합니다. 이 데이터는 기기 밖으로 나가지 않습니다.</p>
-<h2>2. 수집하지 않는 정보</h2>
-<p>이름, 이메일, 전화번호, 위치, 연락처, 사진, 브라우저 기록, 기기 식별자를 수집하지 않습니다. 사용자 계정을 만들지 않습니다. 추적하지 않습니다.</p>
-<h2>3. 제3자 서비스</h2>
-<p><strong>OpenAI API:</strong> 질문은 OpenAI 서버로 전송됩니다: <a href="https://openai.com/privacy" target="_blank">openai.com/privacy</a>.</p>
-<p><strong>Apple StoreKit:</strong> 구매는 Apple이 처리합니다: <a href="https://www.apple.com/privacy/" target="_blank">apple.com/privacy</a>.</p>
-<h2>4. 데이터 저장</h2>
-<p>모든 앱 데이터는 기기에 로컬로 저장됩니다. 앱을 삭제하면 모든 데이터가 영구적으로 삭제됩니다.</p>
-<h2>5. 아동 개인정보</h2>
-<p>Or - Decide Instantly은 16세 미만 아동을 대상으로 하지 않습니다.</p>
-<h2>6. 방침 변경</h2>
-<p>본 방침은 수시로 업데이트될 수 있습니다. 변경 사항은 이 페이지에 반영됩니다.</p>
-<h2>7. 문의하기</h2>
-<p>질문이 있으시면: <a href="mailto:volossoftware@icloud.com">volossoftware@icloud.com</a></p>
+<p class="date">최종 업데이트: 2026년 6월 16일</p>
+<p>본 개인정보 처리방침은 Volos Software Development가 배포하는 Or — Decide Instantly(이하 "당사", "저희" 또는 "본 앱")가 귀하의 정보를 어떻게 처리하는지 설명합니다. 당사는 가능한 한 최소한의 데이터만 수집하고 이를 투명하게 공개하기 위해 노력합니다. 본 앱에는 두 가지 모드가 있습니다. 하나는 AI 모드이고, 다른 하나는 사용자들이 서로의 질문을 묻고 답하는 소셜 모드입니다.</p>
+<h2>1. 당사가 수집하는 정보</h2>
+<p>당사는 본 앱의 두 가지 모드를 운영하는 데 필요한 정보만 수집합니다.</p>
+<p><strong>AI 모드에서 묻는 질문:</strong> 귀하가 AI에게 질문하면, 답변을 생성하기 위해 질문 텍스트가 제3자 AI 제공업체(OpenAI)로 전송됩니다. 당사는 이러한 질문을 서버에 저장하지 않으며, 실시간으로 처리될 뿐 귀하의 신원과 연결되지 않습니다.</p>
+<p><strong>소셜 모드에서 게시하는 콘텐츠:</strong> 귀하가 질문을 게시하거나 다른 사람의 질문에 답할 때, 귀하가 작성한 텍스트(질문과 두 개의 선택지, 또는 짧은 답변)는 다른 사용자가 보고 응답할 수 있도록 당사의 백엔드에 저장됩니다. 이 콘텐츠는 본 앱의 다른 사용자에게 표시됩니다. 해당 콘텐츠는 임의의 익명 식별자에만 연결되며, 귀하의 이름이나 실제 신원과는 결코 연결되지 않습니다.</p>
+<p><strong>익명 계정:</strong> 소셜 모드를 운영하기 위해 본 앱은 Firebase Authentication을 통해 귀하를 익명으로 로그인시킵니다. 이를 통해 이름, 이메일, 비밀번호가 포함되지 않은 귀하의 기기용 임의 식별자가 생성됩니다. 당사는 이 식별자를 사용하여 귀하의 질문을 귀하의 기기와 연결하고(답변이 달릴 때 알림을 보낼 수 있도록), 차단 및 콘텐츠 관리를 시행합니다.</p>
+<p><strong>알림 토큰:</strong> 귀하가 알림을 허용하는 경우, 당사는 귀하의 질문에 답변이 달렸을 때 알려드릴 수 있도록 익명의 푸시 토큰을(Firebase Cloud Messaging 및 Apple Push Notification service를 통해) 저장합니다. 이 토큰은 어떠한 개인정보와도 연결되지 않습니다.</p>
+<p><strong>구독 정보:</strong> 귀하가 Or Premium을 구독하는 경우, 결제는 전적으로 Apple이 App Store를 통해 처리합니다. 당사는 귀하의 결제 정보나 Apple ID를 결코 수집, 저장하거나 접근하지 않습니다.</p>
+<p><strong>사용 데이터:</strong> 당사는 무료 등급 한도를 관리하기 위해 일일 요청 카운터를 귀하의 기기에 로컬로 보관합니다. 이 카운터는 결코 귀하의 기기를 벗어나지 않습니다.</p>
+<h2>2. 당사가 수집하지 않는 정보</h2>
+<p>당사는 개인을 식별할 수 있는 정보를 수집하지 않습니다. 즉, 이름, 이메일 주소, 전화번호, 정확한 위치, 연락처, 사진, 검색 기록을 수집하지 않습니다. 익명 계정과 알림 토큰에는 어떠한 개인정보도 포함되어 있지 않습니다. 당사는 개인정보를 통한 등록을 요구하지 않으며, 다른 앱이나 웹사이트에서 귀하를 추적하지 않고, 광고 SDK를 사용하지 않습니다.</p>
+<h2>3. 커뮤니티 콘텐츠 및 관리</h2>
+<p>소셜 모드는 사용자가 생성한 콘텐츠를 위한 공간이며, 당사는 이를 안전하게 유지하기 위해 노력합니다. 모든 질문과 답변은 게시되기 전에 욕설 및 악성 행위 차단 목록을 기준으로 자동으로 검열되며, 일치하는 내용은 모두 숨겨집니다. 귀하는 본 앱에서 직접 모든 질문을 (사유와 함께) 신고하고 모든 사용자를 차단할 수 있습니다. 사용자를 차단하면 해당 사용자의 콘텐츠가 귀하의 피드에서 제거되며, 질문을 신고하면 해당 작성자도 함께 차단됩니다. 당사는 신고에 대해 조치를 취하며, 부적절한 콘텐츠를 24시간 이내에 삭제할 수 있습니다. 답변되지 않은 질문은 24시간 후 자동으로 만료됩니다.</p>
+<h2>4. 제3자 서비스</h2>
+<p><strong>Google Firebase:</strong> 소셜 모드, 익명 로그인, 알림은 Google Firebase(Cloud Firestore, Firebase Authentication, Firebase Cloud Messaging)에서 실행됩니다. Google은 자사의 개인정보 처리방침에 따라 서비스 제공업체로서 이 데이터를 처리합니다: <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a>.</p>
+<p><strong>OpenAI:</strong> AI 모드에서 묻는 질문은 답변을 생성하기 위해 OpenAI로 전송되며, 귀하의 질문 텍스트만 전송됩니다: <a href="https://openai.com/privacy" target="_blank">openai.com/privacy</a>.</p>
+<p><strong>Apple StoreKit:</strong> 구독 결제는 Apple이 자사의 개인정보 처리방침에 따라 처리합니다: <a href="https://www.apple.com/privacy/" target="_blank">apple.com/privacy</a>.</p>
+<h2>5. 데이터 저장 및 보관</h2>
+<p>로컬 요청 카운터는 귀하의 기기에 남아 있습니다. 소셜 콘텐츠, 귀하의 익명 식별자, 알림 토큰은 Google Firebase 서버에 저장됩니다. 답변되지 않은 질문은 24시간 후 자동으로 만료됩니다. 귀하가 본 앱을 삭제하면 로컬 데이터는 영구적으로 제거됩니다. 이미 소셜 공간에 게시된 콘텐츠는 남아 있을 수 있으나, 당사에 삭제를 요청하실 수 있습니다(아래 참조).</p>
+<h2>6. 귀하의 선택권 및 데이터 삭제</h2>
+<p>귀하는 기기 설정에서 언제든지 알림을 끌 수 있습니다. 소셜 계정은 익명이므로, 모든 데이터 수집을 중단하는 가장 간단한 방법은 본 앱을 삭제하는 것입니다. 귀하가 게시한 콘텐츠나 귀하의 익명 기록의 삭제를 요청하시려면 아래 주소로 이메일을 보내 주시면 당사가 이를 삭제해 드립니다.</p>
+<h2>7. 아동의 개인정보 보호</h2>
+<p>Or — Decide Instantly는 만 16세 미만 아동을 대상으로 하지 않으며, 소셜 모드를 이용하려면 귀하가 만 16세 이상임을 확인해야 합니다. 당사는 아동의 정보를 고의로 수집하지 않습니다.</p>
+<h2>8. 본 방침의 변경</h2>
+<p>당사는 본 개인정보 처리방침을 수시로 업데이트할 수 있습니다. 변경 사항은 새로운 날짜와 함께 본 페이지에 반영됩니다.</p>
+<h2>9. 문의하기</h2>
+<p>개인정보에 관한 문의가 있으신가요? 다음 주소로 연락해 주세요: <a href="mailto:volossoftware@icloud.com">volossoftware@icloud.com</a></p>
 </div>
 
-<!-- HINDI -->
+<!-- HI -->
 <div id="hi" class="lang">
 <h1>गोपनीयता नीति</h1>
-<p class="date">अंतिम अपडेट: 21 मार्च 2026</p>
-<p>यह गोपनीयता नीति बताती है कि Or - Decide Instantly आपकी जानकारी को कैसे संभालता है।</p>
+<p class="date">अंतिम अद्यतन: 16 जून, 2026</p>
+<p>यह गोपनीयता नीति बताती है कि Volos Software Development द्वारा प्रकाशित Or — Decide Instantly ("हम", "हमारा", या "ऐप") आपकी जानकारी को कैसे संभालता है। हम यथासंभव कम से कम डेटा एकत्र करने और इसके बारे में पारदर्शी रहने के लिए प्रतिबद्ध हैं। ऐप में दो मोड हैं: एक AI मोड, और एक सोशल मोड जहाँ उपयोगकर्ता एक-दूसरे के सवाल पूछते और उनके जवाब देते हैं।</p>
 <h2>1. हम कौन सी जानकारी एकत्र करते हैं</h2>
-<p>Or - Decide Instantly को यथासंभव कम डेटा एकत्र करने के लिए डिज़ाइन किया गया है।</p>
-<p><strong>आपके प्रश्न:</strong> जब आप प्रश्न भेजते हैं, तो इसे तृतीय-पक्ष AI सेवा (OpenAI) को भेजा जाता है। हम अपने सर्वर पर आपके प्रश्न संग्रहीत नहीं करते।</p>
-<p><strong>सदस्यता जानकारी:</strong> Or Premium की सदस्यता Apple द्वारा App Store के माध्यम से संसाधित की जाती है।</p>
-<p><strong>उपयोग डेटा:</strong> हम आपके डिवाइस पर स्थानीय रूप से दैनिक अनुरोध काउंटर संग्रहीत करते हैं। यह डेटा कभी आपके डिवाइस से बाहर नहीं जाता।</p>
+<p>हम केवल वही एकत्र करते हैं जो ऐप के दोनों मोड चलाने के लिए आवश्यक है।</p>
+<p><strong>AI मोड में आपके द्वारा पूछे गए सवाल:</strong> जब आप AI से पूछते हैं, तो आपके सवाल का टेक्स्ट जवाब तैयार करने के लिए एक तृतीय-पक्ष AI प्रदाता (OpenAI) को भेजा जाता है। हम इन सवालों को अपने सर्वर पर संग्रहीत नहीं करते; इन्हें वास्तविक समय में संसाधित किया जाता है और आपकी पहचान से नहीं जोड़ा जाता।</p>
+<p><strong>सोशल मोड में आपके द्वारा पोस्ट की गई सामग्री:</strong> जब आप कोई सवाल प्रकाशित करते हैं, या किसी और के सवाल का जवाब देते हैं, तो आपके द्वारा लिखा गया टेक्स्ट (आपका सवाल और उसके दो विकल्प, या आपका संक्षिप्त जवाब) हमारे बैकएंड पर संग्रहीत किया जाता है ताकि अन्य उपयोगकर्ता उसे देख सकें और प्रतिक्रिया दे सकें। यह सामग्री ऐप के अन्य उपयोगकर्ताओं को दिखाई देती है। यह केवल एक यादृच्छिक, गुमनाम पहचानकर्ता से जुड़ी होती है — कभी भी आपके नाम या असली पहचान से नहीं।</p>
+<p><strong>गुमनाम खाता:</strong> सोशल मोड को संचालित करने के लिए, ऐप आपको Firebase Authentication के माध्यम से गुमनाम रूप से साइन इन करता है। इससे आपके डिवाइस के लिए एक यादृच्छिक पहचानकर्ता बनता है जिसमें कोई नाम, ईमेल या पासवर्ड नहीं होता। हम इसका उपयोग आपके सवालों को आपके डिवाइस से जोड़ने के लिए करते हैं (ताकि जब उनका जवाब दिया जाए तो हम आपको सूचित कर सकें) और ब्लॉकिंग व मॉडरेशन लागू करने के लिए करते हैं।</p>
+<p><strong>नोटिफिकेशन टोकन:</strong> यदि आप नोटिफिकेशन की अनुमति देते हैं, तो हम एक गुमनाम पुश टोकन (Firebase Cloud Messaging और Apple Push Notification service के माध्यम से) संग्रहीत करते हैं ताकि जब आपके सवाल का जवाब दिया जाए तो हम आपको सूचित कर सकें। यह किसी भी व्यक्तिगत जानकारी से नहीं जुड़ा होता।</p>
+<p><strong>सदस्यता जानकारी:</strong> यदि आप Or Premium की सदस्यता लेते हैं, तो खरीदारी पूरी तरह से Apple द्वारा App Store के माध्यम से संभाली जाती है। हम कभी भी आपके भुगतान विवरण या Apple ID को न तो एकत्र करते हैं, न संग्रहीत करते हैं, और न ही उन तक हमारी कोई पहुँच होती है।</p>
+<p><strong>उपयोग डेटा:</strong> हम मुफ्त-स्तर की सीमा को प्रबंधित करने के लिए आपके डिवाइस पर स्थानीय रूप से एक दैनिक अनुरोध काउंटर रखते हैं। यह काउंटर कभी आपके डिवाइस से बाहर नहीं जाता।</p>
 <h2>2. हम कौन सी जानकारी एकत्र नहीं करते</h2>
-<p>हम आपका नाम, ईमेल, फ़ोन नंबर, स्थान, संपर्क, फ़ोटो, ब्राउज़िंग इतिहास या डिवाइस पहचानकर्ता एकत्र नहीं करते। हम उपयोगकर्ता खाते नहीं बनाते। हम आपको ट्रैक नहीं करते।</p>
-<h2>3. तृतीय-पक्ष सेवाएं</h2>
-<p><strong>OpenAI API:</strong> प्रश्न OpenAI के सर्वर पर भेजे जाते हैं: <a href="https://openai.com/privacy" target="_blank">openai.com/privacy</a>.</p>
-<p><strong>Apple StoreKit:</strong> खरीदारी Apple द्वारा संसाधित: <a href="https://www.apple.com/privacy/" target="_blank">apple.com/privacy</a>.</p>
-<h2>4. डेटा भंडारण</h2>
-<p>सभी ऐप डेटा आपके डिवाइस पर स्थानीय रूप से संग्रहीत है। ऐप हटाने पर सभी डेटा स्थायी रूप से हटा दिया जाता है।</p>
-<h2>5. बच्चों की गोपनीयता</h2>
-<p>Or - Decide Instantly 16 वर्ष से कम उम्र के बच्चों के लिए नहीं है।</p>
-<h2>6. नीति में परिवर्तन</h2>
-<p>हम इस नीति को अपडेट कर सकते हैं। परिवर्तन इस पृष्ठ पर दिखाई देंगे।</p>
-<h2>7. हमसे संपर्क करें</h2>
-<p>प्रश्न? संपर्क करें: <a href="mailto:volossoftware@icloud.com">volossoftware@icloud.com</a></p>
+<p>हम व्यक्तिगत रूप से पहचान योग्य जानकारी एकत्र नहीं करते: कोई नाम, ईमेल पता, फ़ोन नंबर, सटीक स्थान, संपर्क, फ़ोटो, या ब्राउज़िंग इतिहास नहीं। गुमनाम खाते और नोटिफिकेशन टोकन में कोई व्यक्तिगत डेटा नहीं होता। हम आपसे व्यक्तिगत विवरण के साथ पंजीकरण कराने के लिए नहीं कहते, हम अन्य ऐप्स या वेबसाइटों पर आपको ट्रैक नहीं करते, और हम विज्ञापन SDK का उपयोग नहीं करते।</p>
+<h2>3. समुदाय सामग्री और मॉडरेशन</h2>
+<p>सोशल मोड उपयोगकर्ता-निर्मित सामग्री के लिए एक स्थान है, और हम इसे सुरक्षित रखने के लिए काम करते हैं। प्रत्येक सवाल और जवाब को दिखाई देने से पहले एक अपशब्द व दुर्व्यवहार ब्लॉकलिस्ट के विरुद्ध स्वचालित रूप से जाँचा जाता है, और जो कुछ भी उससे मेल खाता है उसे छिपा दिया जाता है। आप किसी भी सवाल की रिपोर्ट कर सकते हैं (कारण सहित) और ऐप में सीधे किसी भी उपयोगकर्ता को ब्लॉक कर सकते हैं; ब्लॉक करने से उस उपयोगकर्ता की सामग्री आपकी फ़ीड से हट जाती है, और किसी सवाल की रिपोर्ट करने पर उसके लेखक को भी ब्लॉक कर दिया जाता है। हम रिपोर्टों पर कार्रवाई करते हैं और आपत्तिजनक सामग्री को 24 घंटे के भीतर हटा सकते हैं। जिन सवालों का जवाब नहीं दिया जाता उन्हें 24 घंटे के बाद स्वचालित रूप से हटा दिया जाता है।</p>
+<h2>4. तृतीय-पक्ष सेवाएँ</h2>
+<p><strong>Google Firebase:</strong> सोशल मोड, गुमनाम साइन-इन, और नोटिफिकेशन Google Firebase (Cloud Firestore, Firebase Authentication, और Firebase Cloud Messaging) पर चलते हैं। Google इस डेटा को अपनी गोपनीयता नीति के तहत एक सेवा प्रदाता के रूप में संसाधित करता है: <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a>.</p>
+<p><strong>OpenAI:</strong> AI मोड में पूछे गए सवाल जवाब तैयार करने के लिए OpenAI को भेजे जाते हैं; केवल आपके सवाल का टेक्स्ट भेजा जाता है: <a href="https://openai.com/privacy" target="_blank">openai.com/privacy</a>.</p>
+<p><strong>Apple StoreKit:</strong> सदस्यता खरीदारी Apple द्वारा उसकी गोपनीयता नीति के तहत संभाली जाती है: <a href="https://www.apple.com/privacy/" target="_blank">apple.com/privacy</a>.</p>
+<h2>5. डेटा संग्रहण और प्रतिधारण</h2>
+<p>स्थानीय अनुरोध काउंटर आपके डिवाइस पर ही रहता है। सोशल सामग्री, आपका गुमनाम पहचानकर्ता, और आपका नोटिफिकेशन टोकन Google Firebase सर्वरों पर संग्रहीत किए जाते हैं। जिन सवालों का जवाब नहीं दिया जाता उन्हें 24 घंटे के बाद स्वचालित रूप से हटा दिया जाता है। यदि आप ऐप को हटा देते हैं, तो आपका स्थानीय डेटा स्थायी रूप से हटा दिया जाता है; सोशल पूल में पहले से प्रकाशित सामग्री बनी रह सकती है, लेकिन आप हमसे इसे हटाने के लिए कह सकते हैं (नीचे देखें)।</p>
+<h2>6. आपके विकल्प और डेटा हटाना</h2>
+<p>आप किसी भी समय अपने डिवाइस की सेटिंग्स में नोटिफिकेशन बंद कर सकते हैं। चूँकि सोशल खाते गुमनाम होते हैं, सभी डेटा संग्रहण को रोकने का सबसे सरल तरीका ऐप को हटाना है। आपके द्वारा पोस्ट की गई सामग्री या आपके गुमनाम रिकॉर्ड को हटाने का अनुरोध करने के लिए, नीचे दिए गए पते पर हमें ईमेल करें और हम इसे हटा देंगे।</p>
+<h2>7. बच्चों की गोपनीयता</h2>
+<p>Or — Decide Instantly 16 वर्ष से कम उम्र के बच्चों के लिए नहीं है, और सोशल मोड के लिए आपको यह पुष्टि करनी होगी कि आप कम से कम 16 वर्ष के हैं। हम जानबूझकर बच्चों से जानकारी एकत्र नहीं करते।</p>
+<h2>8. इस नीति में परिवर्तन</h2>
+<p>हम समय-समय पर इस गोपनीयता नीति को अद्यतन कर सकते हैं। परिवर्तन इस पृष्ठ पर एक नई तारीख के साथ दर्शाए जाएँगे।</p>
+<h2>9. हमसे संपर्क करें</h2>
+<p>अपनी गोपनीयता के बारे में सवाल हैं? हमसे यहाँ संपर्क करें: <a href="mailto:volossoftware@icloud.com">volossoftware@icloud.com</a></p>
 </div>
 
 </div>
